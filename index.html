@@ -157,6 +157,12 @@
             border: 1px solid var(--accent-glow);
             box-shadow: 0 0 20px 5px rgba(167, 88, 255, 0.5); /* Efeito neon mais forte */
         }
+        
+        /* Cor para abas concluídas */
+        .nav-pills .nav-link.completed {
+             background-color: #23863640; /* Verde escuro semi-transparente */
+             border-left: 4px solid #3fb950;
+        }
 
         .main-content {
             padding: 2.5rem;
@@ -290,6 +296,52 @@
             color: #f85149;
         }
 
+        /* Certificado */
+        .certificate-container {
+            border: 5px solid #a758ff;
+            box-shadow: 0 0 40px rgba(167, 88, 255, 0.6);
+            padding: 3rem;
+            text-align: center;
+            background-color: #000000;
+        }
+        .certificate-container h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #a758ff;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(167, 88, 255, 0.8);
+        }
+        .certificate-container p {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            color: var(--text);
+        }
+        .certificate-container .signature {
+            border-top: 1px dashed var(--accent-glow);
+            display: inline-block;
+            margin-top: 3rem;
+            padding-top: 0.5rem;
+            color: var(--text-muted);
+        }
+        .certificate-container .id-cert {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            color: #58a6ff;
+        }
+        /* Removendo .certificate-disabled para deixar o certificado sempre ativo */
+        .btn-certificate-enabled {
+            background: linear-gradient(90deg, #b721ff, #21d4fd);
+            border: none;
+            box-shadow: 0 0 15px #21d4fd;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-certificate-enabled:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+
         /* Responsividade */
         @media (max-width: 991.98px) {
             .sidebar {
@@ -359,10 +411,15 @@
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab11" data-bs-dismiss="offcanvas"><span><i class="fas fa-shield-alt fa-fw me-2"></i>11. Segurança</span></button>
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab12" data-bs-dismiss="offcanvas"><span><i class="fas fa-balance-scale fa-fw me-2"></i>12. Ética</span></button>
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab13" data-bs-dismiss="offcanvas"><span><i class="fas fa-graduation-cap fa-fw me-2"></i>13. Revisão para Exames</span></button>
+                
+                <hr class="dropdown-divider border-secondary my-2">
+
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab14" data-bs-dismiss="offcanvas"><span><i class="fas fa-trophy fa-fw me-2"></i>Quiz Geral</span></button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab15" data-bs-dismiss="offcanvas"><span><i class="fas fa-rocket fa-fw me-2"></i>Recursos Práticos</span></button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab16" id="certificate-btn-mobile" data-bs-dismiss="offcanvas"><span><i class="fas fa-certificate fa-fw me-2"></i>Certificado</span></button> <!-- Certificado sempre ativo -->
                 
                 <!-- Link para o Quiz Relâmpago -->
-                <button class="nav-link mt-3" data-bs-toggle="pill" data-bs-target="#tab15" data-bs-dismiss="offcanvas" style="background: linear-gradient(90deg, #b721ff, #21d4fd); color: white; font-weight: bold;">
+                <button class="nav-link mt-3" data-bs-toggle="pill" data-bs-target="#tab17" data-bs-dismiss="offcanvas" style="background: linear-gradient(90deg, #b721ff, #21d4fd); color: white; font-weight: bold;">
                     <span><i class="fas fa-bolt fa-fw me-2"></i>Quiz Relâmpago</span>
                 </button>
             </div>
@@ -404,10 +461,15 @@
                         <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab11"><span><i class="fas fa-shield-alt fa-fw me-2"></i>11. Segurança</span></button>
                         <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab12"><span><i class="fas fa-balance-scale fa-fw me-2"></i>12. Ética</span></button>
                         <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab13"><span><i class="fas fa-graduation-cap fa-fw me-2"></i>13. Revisão para Exames</span></button>
+
+                        <hr class="dropdown-divider border-secondary my-2">
+
                         <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab14"><span><i class="fas fa-trophy fa-fw me-2"></i>Quiz Geral</span></button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab15"><span><i class="fas fa-rocket fa-fw me-2"></i>Recursos Práticos</span></button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab16" id="certificate-btn-desktop"><span><i class="fas fa-certificate fa-fw me-2"></i>Certificado</span></button> <!-- Certificado sempre ativo -->
                         
                         <!-- Link para o Quiz Relâmpago -->
-                        <button class="nav-link mt-3" data-bs-toggle="pill" data-bs-target="#tab15" style="background: linear-gradient(90deg, #b721ff, #21d4fd); color: white; font-weight: bold;">
+                        <button class="nav-link mt-3" data-bs-toggle="pill" data-bs-target="#tab17" style="background: linear-gradient(90deg, #b721ff, #21d4fd); color: white; font-weight: bold;">
                             <span><i class="fas fa-bolt fa-fw me-2"></i>Quiz Relâmpago</span>
                         </button>
                     </div>
@@ -416,6 +478,12 @@
 
             <!-- Conteúdo Principal (col-12 por padrão, col-lg-9 no desktop) -->
             <main class="col-12 col-lg-9 main-content" id="main-content">
+                <!-- Status de Autenticação/ID do Usuário -->
+                <div class="mb-3 p-3 bg-black/50 rounded-lg border border-primary/50 text-xs text-muted d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-lock me-2"></i> Status: <span id="auth-status" class="text-warning">Conectando...</span></span>
+                    <span id="user-id-display" class="font-mono text-cyan-400"></span>
+                </div>
+
                 <!-- Botão Menu Mobile (Visível apenas em telas pequenas) -->
                 <button class="btn btn-dark d-lg-none w-100 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu" aria-controls="mobile-menu" style="background-color: var(--card-bg) !important; border-color: var(--border) !important;">
                     <i class="fas fa-bars me-2 text-primary"></i> Navegação do Curso
@@ -564,7 +632,8 @@
                                 <li>$O(1)$ (Constante): Excelente. O tempo é o mesmo, não importa o tamanho.</li>
                                 <li>$O(\log n)$ (Logarítmico): Ótimo. (ex: Busca Binária).</li>
                                 <li>$O(n)$ (Linear): Bom. O tempo cresce na mesma proporção que os dados. (ex: Busca Linear).</li>
-                                <li>$O(n^2)$ (Quadrático): Ruim. O tempo cresce exponencialmente. (ex: Bubble Sort).</li>
+                                <li>$O(n \log n)$ (Log-Linear): Ótimo. Padrão de algoritmos de ordenação eficientes (Quick Sort, Merge Sort).</li>
+                                <li>$O(n^2)$ (Quadrático): Ruim. O tempo cresce exponencialmente. (ex: Loops aninhados <code>for</code> dentro de <code>for</code>, Bubble Sort).</li>
                             </ul>
 
                             <h4>Estruturas de Dados Comuns</h4>
@@ -628,7 +697,7 @@
                             <p>Para que computadores de diferentes fabricantes e sistemas operacionais possam conversar, eles precisam seguir regras padronizadas. O modelo TCP/IP é a base da Internet.</p>
                             <ul>
                                 <li><strong>Camada de Aplicação (HTTP, SMTP):</strong> Onde os aplicativos (navegador, cliente de email) operam.</li>
-                                <li><strong>Camada de Transporte (TCP, UDP):</strong> Gerencia a conexão entre os dois pontos finais da comunicação.</li>
+                                <li><strong>Camada de Transporte (TCP, UDP):</strong> Gerencia a comunicação ponta-a-ponta.</li>
                                 <li><strong>Camada de Internet (IP):</strong> Responsável por endereçar e rotear os pacotes de dados pela rede.</li>
                                 <li><strong>Camada de Enlace (Ethernet, Wi-Fi):</strong> Lida com a transmissão física dos dados no meio (cabos, ondas de rádio).</li>
                             </ul>
@@ -753,7 +822,7 @@
                             <ul>
                                 <li><strong>Aprendizado Supervisionado:</strong> O modelo é treinado com dados rotulados (ex: milhares de fotos de gatos rotuladas como "gato" e de cães como "cachorro"). O objetivo é prever o rótulo de dados novos. (Usado para classificação e regressão).</li>
                                 <li><strong>Aprendizado Não Supervisionado:</strong> O modelo é treinado com dados não rotulados. O objetivo é encontrar padrões e estruturas ocultas nos dados (ex: agrupar clientes com comportamentos de compra semelhantes).</li>
-                                <li><strong>Aprendizado por Reforço:</strong> O modelo aprende tomando ações em um ambiente e recebendo recompensas ou punições (ex: IA para jogos de xadrez ou carros autônomos).</li>
+                                <li><strong>Aprendizado por Reforço:</strong> O modelo aprende tomando decisões e recebendo recompensas ou punições (ex: IA para jogos de xadrez ou carros autônomos).</li>
                             </ul>
 
                             <h4>Processamento de Linguagem Natural (PLN)</h4>
@@ -783,7 +852,7 @@
                                         <li><strong>Assimétrica (Chave Pública/Privada):</strong> Usa um par de chaves. O que a chave pública criptografa, só a chave privada descriptografa. É a base do <strong>HTTPS</strong>.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Hashing (Mão Única):</strong> Transforma dados de qualquer tamanho em uma string de tamanho fixo (hash). É <strong>irreversível</strong>; não se pode obter os dados originais a partir do hash. Usado para armazenar senhas (armazena-se o hash da senha, não a senha) e para verificar a integridade de arquivos.</li>
+                                <li><strong>Hashing (Mão Única):</strong> Transforma dados de qualquer tamanho em uma string de tamanho fixo (hash). É <strong>irreversível</strong>; não se pode obter os dados originais a partir do hash. Usado para verificar a <strong>Integridade</strong> de arquivos e para armazenar senhas com segurança.</li>
                             </ul>
                             
                             <h4>Autenticação e Autorização</h4>
@@ -861,7 +930,7 @@
                                     <ul>
                                         <li><strong>Unidade de Controle (UC):</strong> Gerencia o ciclo de instrução.</li>
                                         <li><strong>Unidade Lógica e Aritmética (ULA):</strong> Realiza os cálculos (soma, E, OU).</li>
-                                        <li><strong>Registradores:</strong> Memória ultrarrápida dentro da CPU para dados imediatos.</li>
+                                        <li><strong>Registradores:</strong> Pequenas unidades de memória ultrarrápidas dentro da CPU para dados imediatos.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Gargalo de von Neumann:</strong> A limitação de desempenho causada pelo fato de que a CPU e a Memória Principal (RAM) são separadas e conectadas por um barramento (bus) mais lento. A <strong>Memória Cache</strong> (L1, L2, L3) existe para mitigar isso.</li>
@@ -887,7 +956,7 @@
                                 <li><strong>Lista Ligada (Linked List):</strong> Coleção de elementos (nós) onde cada nó aponta para o próximo. Inserção/Remoção é $O(1)$ (rápido). Acesso/Busca é $O(n)$ (lento).</li>
                                 <li><strong>Pilha (Stack):</strong> Estrutura LIFO (Last-In, First-Out). Operações: <code>push</code> (adicionar ao topo) e <code>pop</code> (remover do topo). Usos: Histórico "Desfazer", chamadas de função do sistema.</li>
                                 <li><strong>Fila (Queue):</strong> Estrutura FIFO (First-In, First-Out). Operações: <code>enqueue</code> (adicionar ao fim) e <code>dequeue</code> (remover do início). Usos: Fila de impressão, gerenciamento de tarefas.</li>
-                                <li><strong>Hash Table (Mapa):</strong> Usa uma <strong>Função de Hash</strong> para mapear uma chave (ex: "nome") a um índice de array. Permite buscas, inserções e remoções em $O(1)$ (tempo médio). O principal desafio é o tratamento de <strong>Colisões</strong> (quando duas chaves geram o mesmo índice).</li>
+                                <li><strong>Hash Table (Mapa):</strong> Usa uma <strong>Função de Hash</strong> para mapear uma chave (ex: "nome") a um índice de array. Permite buscas quase instantâneas ($O(1)$ na média). O principal desafio é o tratamento de <strong>Colisões</strong> (quando duas chaves geram o mesmo índice).</li>
                                 <li><strong>Árvore Binária de Busca (BST):</strong> Estrutura de nós onde cada nó tem no máximo dois filhos. O filho da esquerda é menor que o pai, e o da direita é maior. Permite buscas, inserções e remoções em $O(\log n)$ se a árvore estiver balanceada.</li>
                             </ul>
     
@@ -946,14 +1015,14 @@
                             <ul>
                                 <li><strong>Tríade CIA:</strong> Confidencialidade, Integridade, Disponibilidade.</li>
                                 <li><strong>Criptografia Simétrica:</strong> A mesma chave secreta é usada para criptografar e descriptografar (ex: AES). Rápida, mas difícil de compartilhar a chave.</li>
-                                <li><strong>Criptografia Assimétrica (Chave Pública/Privada):</strong> Um par de chaves. A Chave Pública criptografa, a Chave Privada descriptografa. É a base do HTTPS e assinaturas digitais.</li>
+                                <li><strong>Criptografia Assimétrica (Chave Pública/Privada):</strong> Um par de chaves. O que a chave pública criptografa, só a chave privada descriptografa. É a base do HTTPS e assinaturas digitais.</li>
                                 <li><strong>Hashing:</strong> Uma função de mão única (irreversível) que gera uma "impressão digital" (hash) dos dados. Usada para verificar a <strong>Integridade</strong> de arquivos e para armazenar senhas com segurança.</li>
                             </ul>
     
                             <h5>3. Inteligência Artificial e Machine Learning</h5>
                             <ul>
                                 <li><strong>Aprendizado Supervisionado:</strong> O modelo aprende com dados previamente rotulados (ex: e-mails marcados como "spam" ou "não spam").</li>
-                                <li><strong>Aprendizado Não Supervisionado:</strong> O modelo encontra padrões em dados não rotulados (ex: agrupar clientes por comportamento de compra).</li>
+                                <li><strong>Aprendizado Não Supervisionado:</strong> O modelo encontra padrões em dados não rotulados (ex: agrupar clientes com comportamentos de compra semelhantes).</li>
                                 <li><strong>Aprendizado por Reforço:</strong> O modelo aprende tomando decisões e recebendo recompensas ou punições (ex: IA de jogos).</li>
                             </ul>
     
@@ -1123,8 +1192,65 @@
                         </div>
                     </div>
 
-                    <!-- Conteúdo do Quiz Relâmpago (aba 15) -->
+                    <!-- 15. RECURSOS PRÁTICOS (NOVO) -->
                     <div class="tab-pane fade" id="tab15">
+                        <div class="card-section" data-aos="fade-up">
+                            <h2><i class="fas fa-rocket me-2"></i>15. Recursos Práticos e Projetos</h2>
+                            <p>Esta seção foi criada para fornecer o valor prático essencial de um curso premium. Aqui você encontra links para ambientes de trabalho e materiais de apoio.</p>
+
+                            <h4>Laboratórios Práticos (Projetos Essenciais)</h4>
+                            <p>Estes são os projetos sugeridos para consolidar os módulos 5, 6 e 8:</p>
+                            <ul>
+                                <li><strong>Projeto de Algoritmos:</strong> Implementação de um Algoritmo de Ordenação (ex: Merge Sort) em Python, incluindo análise da complexidade $O(n \log n)$. 
+                                    <a href="https://gitlab.com/public-algorithms/sorting-algorithms/-/blob/main/merge_sort.py" target="_blank" class="text-primary fw-bold">[Download do Guia Prático]</a></li>
+                                <li><strong>Projeto de Banco de Dados:</strong> Modelagem de um Banco de Dados Simples (3-4 tabelas), executando consultas SQL complexas (com JOINs) e aplicando a 3ª Forma Normal (3FN). 
+                                    <a href="https://sqliteonline.com/" target="_blank" class="text-primary fw-bold">[Ambiente de SQL Online]</a></li>
+                                <li><strong>Projeto de Redes:</strong> Simulação de uma rede LAN/WAN usando ferramentas como Cisco Packet Tracer para entender roteamento (Aba 7). 
+                                    <a href="https://www.netacad.com/pt-br/cursos/packet-tracer" target="_blank" class="text-primary fw-bold">[Verificar Ferramentas]</a></li>
+                            </ul>
+
+                            <h4 class="mt-5">Kit de Ferramentas do Desenvolvedor</h4>
+                            <p>Recursos indispensáveis para a vida profissional:</p>
+                            <ul>
+                                <li><strong>IDE (Ambiente de Desenvolvimento Integrado):</strong> Visual Studio Code (VS Code) ou IntelliJ IDEA.</li>
+                                <li><strong>Versionamento de Código:</strong> Guia de primeiros passos com Git e GitHub (Essencial para Engenharia de Software - Aba 9).</li>
+                                <li><strong>Documentação:</strong> Link para a documentação oficial da Python (para a Aba 6) e do PostgreSQL (para a Aba 8).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 16. CERTIFICADO (NOVO) -->
+                    <div class="tab-pane fade" id="tab16">
+                        <div class="card-section" data-aos="fade-up">
+                            <h2><i class="fas fa-certificate me-2"></i>16. Certificado de Conclusão</h2>
+                            <p class="lead text-center text-muted mb-5">Este certificado é gerado com seu ID único, validando sua conclusão do curso.</p>
+
+                            <div id="certificate-view">
+                                <!-- O certificado será injetado aqui pelo JS -->
+                                <div class="certificate-container" id="certificate-template">
+                                    <p class="mb-2 text-primary">INSTITUTO DE CIÊNCIA DA COMPUTAÇÃO NEON</p>
+                                    <h3>CERTIFICADO DE EXCELÊNCIA</h3>
+                                    <p>Certificamos que</p>
+                                    <h4 class="display-6 text-white" id="cert-user-id">ID: [Carregando...]</h4>
+                                    <p>Completou o <strong>"Curso Imersivo de Ciência da Computação V3.0 (Edição Néon)"</strong> com êxito, dominando os fundamentos de Algoritmos, Estruturas de Dados, Arquitetura, Redes e IA.</p>
+                                    
+                                    <div class="signature">
+                                        <span id="cert-date">Data: 15 de Novembro de 2025</span><br>
+                                        <small>Assinatura Digital do Instrutor</small>
+                                    </div>
+                                    <div class="id-cert">
+                                        <small>ID de Certificação Única: <span id="cert-unique-id">Aguardando ID...</span></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-certificate-enabled btn-lg" id="generate-cert-btn"><i class="fas fa-print me-2"></i> Imprimir / Baixar Certificado</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Relâmpago (antiga 18, agora 17) -->
+                    <div class="tab-pane fade" id="tab17">
                         <div class="card-section text-center" data-aos="fade-up">
                             <h2><i class="fas fa-bolt me-2"></i>Quiz Relâmpago</h2>
                             <p class="lead text-muted">Você tem <span class="fw-bold" id="time">30</span> segundos para acertar o máximo que puder!</p>
@@ -1157,141 +1283,328 @@
     <!-- AOS (Animações ao Rolar) JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <script>
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, onSnapshot, getDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Variáveis globais obrigatórias injetadas pelo ambiente
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db;
+        let auth;
+        let currentUserId = null;
+        let isAuthReady = false;
+        
         // Fundo dinâmico
         const backgroundImages = {
-            // URLs SUBSTITUÍDAS por imagens mais dinâmicas e temáticas
-            '#tab1': 'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1600&q=80&auto=format&fit=crop', // História (Placa de circuito antiga)
-            '#tab2': 'https://images.unsplash.com/photo-1593113598332-cd2880ab8153?w=1600&q=80&auto=format&fit=crop', // Representação (Matrix de código binário)
-            '#tab3': 'https://images.unsplash.com/photo-1614741118874-a29e46c65e8c?w=1600&q=80&auto=format&fit=crop', // Arquitetura (Interior de um chip)
-            '#tab4': 'https://images.unsplash.com/photo-1542744173-8e7e53415bb6?w=1600&q=80&auto=format&fit=crop', // SO (Interface gráfica abstrata)
-            '#tab5': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop', // Algoritmos (Gráficos e dados)
-            '#tab6': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80&auto=format&fit=crop', // Linguagens (Código num ecrã)
-            '#tab7': 'https://images.unsplash.com/photo-1519389950473-90ba0279068d?w=1600&q=80&auto=format&fit=crop', // Redes (Cabos de fibra ótica)
-            '#tab8': 'https://images.unsplash.com/photo-1573167710707-bca8f483d047?w=1600&q=80&auto=format&fit=crop', // Bancos (Sala de servidores)
-            '#tab9': 'https://images.unsplash.com/photo-1581090464777-f322025f8222?w=1600&q=80&auto=format&fit=crop', // Engenharia (Equipa a planear)
-            '#tab10': 'https://images.unsplash.com/photo-1620712943543-f58c7e0c09d5?w=1600&q=80&auto=format&fit=crop', // IA (Cérebro de rede neural)
-            '#tab11': 'https://images.unsplash.com/photo-1550751827-41437c4f4895?w=1600&q=80&auto=format&fit=crop', // Segurança (Cadeado digital)
-            '#tab12': 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&q=80&auto=format&fit=crop', // Ética (Pessoa a interagir com tecnologia)
-            '#tab13': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80&auto=format&fit=crop', // NOVO: Revisão para Exames
-            '#tab14': 'https://images.unsplash.com/photo-1593341641662-a86a86f0c623?w=1600&q=80&auto=format&fit=crop', // Quiz Geral (Troféu/Conquista)
-            '#tab15': 'https://images.unsplash.com/photo-1509343256512-d77a5cbddb1e?w=1600&q=80&auto=format&fit=crop' // Quiz Relâmpago (Luzes de néon rápidas)
+            '#tab1': 'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1600&q=80&auto=format&fit=crop', 
+            '#tab2': 'https://images.unsplash.com/photo-1593113598332-cd2880ab8153?w=1600&q=80&auto=format&fit=crop', 
+            '#tab3': 'https://images.unsplash.com/photo-1614741118874-a29e46c65e8c?w=1600&q=80&auto=format&fit=crop', 
+            '#tab4': 'https://images.unsplash.com/photo-1542744173-8e7e53415bb6?w=1600&q=80&auto=format&fit=crop', 
+            '#tab5': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop', 
+            '#tab6': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80&auto=format&fit=crop', 
+            '#tab7': 'https://images.unsplash.com/photo-1519389950473-90ba0279068d?w=1600&q=80&auto=format&fit=crop', 
+            '#tab8': 'https://images.unsplash.com/photo-1573167710707-bca8f483d047?w=1600&q=80&auto=format&fit=crop', 
+            '#tab9': 'https://images.unsplash.com/photo-1581090464777-f322025f8222?w=1600&q=80&auto=format&fit=crop', 
+            '#tab10': 'https://images.unsplash.com/photo-1620712943543-f58c7e0c09d5?w=1600&q=80&auto=format&fit=crop', 
+            '#tab11': 'https://images.unsplash.com/photo-1550751827-41437c4f4895?w=1600&q=80&auto=format&fit=crop', 
+            '#tab12': 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&q=80&auto=format&fit=crop', 
+            '#tab13': 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80&auto=format&fit=crop', 
+            '#tab14': 'https://images.unsplash.com/photo-1593341641662-a86a86f0c623?w=1600&q=80&auto=format&fit=crop', // Quiz Geral
+            '#tab15': 'https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=1600&q=80&auto=format&fit=crop', // Recursos Práticos
+            '#tab16': 'https://images.unsplash.com/photo-1550751827-41437c4f4895?w=1600&q=80&auto=format&fit=crop', // Certificado
+            '#tab17': 'https://images.unsplash.com/photo-1509343256512-d77a5cbddb1e?w=1600&q=80&auto=format&fit=crop' // Quiz Relâmpago
         };
+        
+        // Váriavel de estado central
+        const completedSections = new Set();
+        const totalSections = 13; // Apenas módulos de 1 a 13
+        const courseName = "Curso Imersivo de Ciência da Computação V3.0 (Edição Néon)";
 
+        // Elementos UI
+        const progressBar = document.getElementById('progress-bar-inner');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const progressBarMobile = document.getElementById('progress-bar-inner-mobile');
+        const progressPercentageMobile = document.getElementById('progress-percentage-mobile');
+        const authStatusEl = document.getElementById('auth-status');
+        const userIdDisplayEl = document.getElementById('user-id-display');
+        const navLinks = document.querySelectorAll('.nav-pills .nav-link');
+        const heroSection = document.querySelector('.hero-section');
+        const certBtnDesktop = document.getElementById('certificate-btn-desktop');
+        const certBtnMobile = document.getElementById('certificate-btn-mobile');
+        const certTemplate = document.getElementById('certificate-template');
+        const certUniqueIdEl = document.getElementById('cert-unique-id');
+        const certUserIdEl = document.getElementById('cert-user-id');
+        const certDateEl = document.getElementById('cert-date');
+        const certPrintBtn = document.getElementById('generate-cert-btn');
+
+
+        // Função para atualizar a barra de progresso (local)
+        function updateProgressBar() {
+            const completedCount = completedSections.size;
+            const percentage = Math.round((completedCount / totalSections) * 100);
+            
+            // Atualiza barra desktop
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+                progressBar.setAttribute('aria-valuenow', percentage);
+                progressPercentage.textContent = percentage + '%';
+            }
+
+            // Atualiza barra mobile
+            if (progressBarMobile) {
+                progressBarMobile.style.width = percentage + '%';
+                progressBarMobile.setAttribute('aria-valuenow', percentage);
+                progressPercentageMobile.textContent = percentage + '%';
+            }
+            
+            checkCompletionStatus(percentage);
+        }
+        
+        // Função para checar 100% e habilitar o certificado
+        function checkCompletionStatus(percentage) {
+            // Remove a desativação por 100% para que o botão esteja sempre ativo para testes.
+            const isCompleted = completedSections.size > 0; // Se pelo menos uma aba foi visitada
+            const percentageText = `Certificado (${percentage}%)`;
+
+            // O botão do certificado não será mais desativado pelo progresso
+            if (certBtnDesktop) {
+                certBtnDesktop.textContent = percentageText;
+                // Mantemos as classes de estilo sempre ativas
+            }
+            
+            if (certBtnMobile) {
+                certBtnMobile.textContent = percentageText;
+            }
+            
+            // Gerar o certificado dinâmico (apenas para exibir o ID)
+            if (currentUserId) {
+                generateCertificate(currentUserId);
+            }
+        }
+
+        // Função para gerar o conteúdo do certificado
+        function generateCertificate(userId) {
+            if (!certTemplate) return;
+            
+            const date = new Date();
+            const dateString = date.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
+            
+            // Cria um ID de certificação baseado no timestamp e no UserID
+            const certId = `${userId.substring(0, 8)}-${date.getTime()}`;
+
+            certUserIdEl.textContent = `ID: ${userId}`;
+            certUniqueIdEl.textContent = certId;
+            certDateEl.textContent = `Data: ${dateString}`;
+            
+            certTemplate.classList.remove('certificate-disabled');
+            certPrintBtn.disabled = false;
+        }
+
+        // Caminho do documento no Firestore
+        function getUserProgressDocRef(userId) {
+            return doc(db, `artifacts/${appId}/users/${userId}/courseData/progress`);
+        }
+        
+        // Função para marcar links como 'completed' no menu
+        function updateNavLinks() {
+            navLinks.forEach(link => {
+                const targetId = link.getAttribute('data-bs-target');
+                if (completedSections.has(targetId)) {
+                    link.classList.add('completed');
+                } else {
+                    link.classList.remove('completed');
+                }
+            });
+        }
+
+
+        // ----------------------------------------------------
+        // FIREBASE: Inicialização e Gerenciamento de Dados
+        // ----------------------------------------------------
+
+        async function initFirebase() {
+            try {
+                if (!firebaseConfig) {
+                    throw new Error("Configuração do Firebase não encontrada.");
+                }
+                
+                // setLogLevel('debug'); // Ativa logs de debug do Firebase
+                
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                
+                authStatusEl.textContent = 'Autentizando...';
+
+                await setPersistence(auth, browserLocalPersistence).catch(() => {});
+
+                onAuthStateChanged(auth, async (user) => {
+                    if (user) {
+                        currentUserId = user.uid;
+                        isAuthReady = true;
+                        authStatusEl.textContent = 'Conectado (Anon)';
+                        userIdDisplayEl.textContent = `ID: ${currentUserId}`;
+                        
+                        loadProgress();
+                    } else {
+                        await attemptLogin();
+                    }
+                });
+
+            } catch (error) {
+                console.error("Erro na inicialização do Firebase:", error);
+                authStatusEl.textContent = 'ERRO DE CONEXÃO';
+            }
+        }
+        
+        async function attemptLogin() {
+            try {
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Erro no login Firebase:", error);
+                authStatusEl.textContent = 'ERRO DE LOGIN';
+            }
+        }
+
+        async function loadProgress() {
+            if (!isAuthReady || !currentUserId) return;
+            
+            const docRef = getUserProgressDocRef(currentUserId);
+            
+            onSnapshot(docRef, (docSnap) => {
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    const savedSections = data.completedSections || "[]";
+                    
+                    try {
+                        const parsedSections = JSON.parse(savedSections);
+                        completedSections.clear();
+                        parsedSections.forEach(item => {
+                            completedSections.add(item);
+                        });
+                        updateNavLinks();
+                        updateProgressBar();
+                    } catch (e) {
+                        console.error("Erro ao analisar o progresso salvo:", e);
+                    }
+                } else {
+                    updateProgressBar(); 
+                }
+            }, (error) => {
+                console.error("Erro ao carregar progresso:", error);
+                authStatusEl.textContent = 'ERRO DE CARREGAMENTO';
+            });
+        }
+
+        async function saveProgress() {
+            if (!isAuthReady || !currentUserId) return;
+            
+            const docRef = getUserProgressDocRef(currentUserId);
+            const serializedProgress = JSON.stringify(Array.from(completedSections));
+            
+            try {
+                await setDoc(docRef, { 
+                    completedSections: serializedProgress,
+                    lastUpdated: new Date().toISOString()
+                }, { merge: true });
+            } catch (e) {
+                console.error("Erro ao salvar progresso:", e);
+                authStatusEl.textContent = 'ERRO AO SALVAR';
+            }
+        }
+
+        // ----------------------------------------------------
+        // Lógica Principal do DOM
+        // ----------------------------------------------------
+        
         document.addEventListener('DOMContentLoaded', function() {
+            initFirebase(); 
+
             // Inicializa AOS (Animações)
             AOS.init({
                 duration: 600,
                 once: true,
             });
 
-            const heroSection = document.querySelector('.hero-section');
-            const navLinks = document.querySelectorAll('.nav-pills .nav-link');
-            const completedSections = new Set();
-            
-            // Referências para a barra de progresso desktop
-            const progressBar = document.getElementById('progress-bar-inner');
-            const progressPercentage = document.getElementById('progress-percentage');
-            // Referências para a barra de progresso mobile
-            const progressBarMobile = document.getElementById('progress-bar-inner-mobile');
-            const progressPercentageMobile = document.getElementById('progress-percentage-mobile');
-            
-            // --- Novos Elementos de Controle de Layout ---
+            // --- Elementos de Controle de Layout e Certificado ---
             const layoutToggleBtn = document.getElementById('layout-toggle-btn');
             const mainContent = document.getElementById('main-content');
             const desktopSidebar = document.getElementById('desktop-sidebar');
             const mobileToggleBtn = document.querySelector('.main-content > .btn.d-lg-none');
-            // Estado do Layout (padrão é "desktop", o CSS do Bootstrap cuida do mobile em telas pequenas)
             let currentLayout = 'desktop';
 
-            // Função para alternar entre Desktop e Mobile (Forçado)
             function toggleLayout() {
                 if (currentLayout === 'desktop') {
-                    // Mudar para Mobile (Forçado)
                     currentLayout = 'mobile';
-                    
-                    // 1. Oculta o menu lateral desktop
                     desktopSidebar.style.display = 'none';
-                    // 2. Expande o conteúdo principal para 12 colunas em telas grandes
                     mainContent.classList.remove('col-lg-9');
                     mainContent.classList.add('col-lg-12');
-                    // 3. Mostra o botão de navegação mobile (que o d-lg-none esconde em tela grande)
                     mobileToggleBtn.style.display = 'block';
-
                     layoutToggleBtn.innerHTML = '<i class="fas fa-desktop me-2"></i> Mudar para Desktop';
-
                 } else {
-                    // Mudar para Desktop (Normal)
                     currentLayout = 'desktop';
-                    
-                    // 1. Mostra o menu lateral desktop (volta ao estado default do Bootstrap)
                     desktopSidebar.style.display = ''; 
-                    // 2. Restaura o tamanho do conteúdo principal
                     mainContent.classList.remove('col-lg-12');
                     mainContent.classList.add('col-lg-9');
-                    // 3. Oculta o botão mobile (deixa o d-lg-none fazer o trabalho)
                     mobileToggleBtn.style.display = ''; 
-
                     layoutToggleBtn.innerHTML = '<i class="fas fa-mobile-alt me-2"></i> Mudar para Mobile';
                 }
             }
-
             layoutToggleBtn.addEventListener('click', toggleLayout);
-            // ---------------------------------------------
+
+            certPrintBtn.addEventListener('click', () => {
+                window.print(); // Abre a caixa de diálogo de impressão
+            });
             
-
-            // Pré-carrega a imagem inicial
-            preloadImage(backgroundImages['#tab1']);
-
-            // Função para atualizar a barra de progresso
-            function updateProgressBar() {
-                const totalSections = 13; // O número total de seções de aprendizado (excluindo quizzes)
-                const completedCount = completedSections.size;
-                const percentage = Math.round((completedCount / totalSections) * 100);
-                
-                // Atualiza a barra desktop
-                progressBar.style.width = percentage + '%';
-                progressBar.setAttribute('aria-valuenow', percentage);
-                progressPercentage.textContent = percentage + '%';
-
-                // Atualiza a barra mobile
-                if (progressBarMobile) {
-                    progressBarMobile.style.width = percentage + '%';
-                    progressBarMobile.setAttribute('aria-valuenow', percentage);
-                    progressPercentageMobile.textContent = percentage + '%';
-                }
-            }
-
             // Função para pré-carregar imagens
             function preloadImage(url) {
                 const img = new Image();
                 img.src = url;
             }
 
-            // Lógica de navegação e fundo dinâmico
+            // Pré-carrega a imagem inicial
+            preloadImage(backgroundImages['#tab1']);
+
+
+            // Lógica de navegação, fundo dinâmico E SALVAMENTO DE PROGRESSO
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     const targetId = e.currentTarget.getAttribute('data-bs-target');
                     
-                    // Adiciona à lista de concluídos (se for uma seção de aprendizado)
-                    if (targetId && targetId.startsWith('#tab') && !targetId.includes('Quiz')) {
-                        // Extrai o número da aba (ex: de '#tab1' para 1)
+                    // Adiciona à lista de concluídos (e salva no Firestore)
+                    if (targetId && targetId.startsWith('#tab') && !targetId.includes('Quiz') && targetId !== '#tab16' && targetId !== '#tab17') {
                         const tabNumber = parseInt(targetId.replace('#tab', ''));
-                        if(tabNumber <= 13) { // Só conta até a aba 13
-                             completedSections.add(targetId);
+                        if(tabNumber <= totalSections) {
+                             if (!completedSections.has(targetId)) {
+                                completedSections.add(targetId);
+                                saveProgress();
+                             }
                              updateProgressBar();
+                             updateNavLinks();
                         }
                     }
 
                     // Muda a imagem de fundo do Hero
                     if (backgroundImages[targetId]) {
-                        preloadImage(backgroundImages[targetId]); // Pré-carrega a próxima
-                        
-                        // Aplica o efeito de fade
+                        preloadImage(backgroundImages[targetId]);
                         heroSection.style.transition = 'background-image 0.5s ease-in-out';
                         heroSection.style.backgroundImage = `
                             linear-gradient(180deg, rgba(13, 17, 23, 0.8) 0%, var(--bg) 100%), 
                             url('${backgroundImages[targetId]}')`;
+                    }
+                    
+                    // Se o certificado for clicado, garante que o ID seja atualizado
+                    if (targetId === '#tab16' && currentUserId) {
+                        generateCertificate(currentUserId);
                     }
                 });
             });
@@ -1434,7 +1747,6 @@
 
             function loadQuestion() {
                 if (currentQuestionIndex >= rapidQuestions.length) {
-                    // Se acabar as perguntas antes do tempo, reinicia
                     currentQuestionIndex = 0;
                 }
                 
@@ -1458,6 +1770,12 @@
 
             function selectAnswer(e) {
                 const selectedBtn = e.target;
+
+                // CORREÇÃO: Desabilita todos os botões imediatamente. Isso evita que o usuário clique
+                // rapidamente e chame a função selectAnswer antes que loadQuestion() gere uma nova
+                // pergunta, o que estava causando o erro de índice fora dos limites.
+                optionsEl.querySelectorAll('button').forEach(b => b.disabled = true); 
+                
                 const correct = selectedBtn.textContent === rapidQuestions[currentQuestionIndex].c;
 
                 if (correct) {
