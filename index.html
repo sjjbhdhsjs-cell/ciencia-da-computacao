@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -67,9 +68,6 @@
             <div class="tab-content" id="v-pills-tabContent">
 
                 <!-- 1. História -->
-                <!-- 1. História -->
-                <!-- 1. História -->
-                <!-- 1. História -->
                 <div class="tab-pane fade show active" id="tab1">
                     <div class="card-section">
                         <h2>1. História da Computação</h2>
@@ -77,7 +75,6 @@
                         <p><strong>1837</strong> – Máquina Analítica de Charles Babbage, o primeiro conceito de um computador programável.<br><strong>1936</strong> – A Máquina de Turing, modelo teórico que fundamentou a ciência da computação.<br><strong>1940s</strong> – ENIAC e a arquitetura de von Neumann, que definiu o computador moderno.<br><strong>1971</strong> – Lançamento do Intel 4004, o primeiro microprocessador comercial.<br><strong>1991</strong> – A World Wide Web é aberta ao público, conectando o mundo.<br><strong>2007+</strong> – A era dos smartphones e da IA generativa, que colocou o poder computacional em nossos bolsos.</p>
                         <div class="curiosidade">Ada Lovelace, ao trabalhar na Máquina Analítica de Babbage, escreveu o que é considerado o primeiro algoritmo da história em 1843, mais de um século antes dos primeiros computadores serem construídos.</div>
                         <h5>Vídeo recomendado</h5>
-                        <!-- LINK DO VÍDEO CORRIGIDO ABAIXO -->
                         <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/za5g_4-R_4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
@@ -94,6 +91,34 @@
                             <p>3. A arquitetura que define os computadores modernos foi proposta por:</p>
                             <select class="form-select" onchange="check(this,'John von Neumann')"><option selected disabled></option><option>John von Neumann</option><option>Tim Berners-Lee</option><option>Steve Jobs</option></select>
                             <div class="quiz-feedback correct">Correto! ✅ A arquitetura de von Neumann é a base de quase todos os computadores.</div><div class="quiz-feedback wrong">Incorreto. Foi John von Neumann.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. Representação de Dados -->
+                <div class="tab-pane fade" id="tab2">
+                    <div class="card-section">
+                        <h2>2. Representação de Dados</h2>
+                        <p>Computadores não entendem letras, imagens ou sons como nós. Tudo é convertido para um formato que eles podem processar: números binários (0s e 1s). Entender como essa tradução ocorre é fundamental.</p>
+                        <p><strong>Bits e Bytes</strong> – O bit é a menor unidade de informação (0 ou 1). Um conjunto de 8 bits forma um byte.<br><strong>Textos</strong> – Caracteres são mapeados para números através de padrões como ASCII (para o inglês) e Unicode (que suporta quase todos os idiomas do mundo).<br><strong>Números</strong> – Inteiros são convertidos diretamente para binário. Números com frações usam o padrão de ponto flutuante.<br><strong>Imagens</strong> – São divididas em uma grade de pixels. A cor de cada pixel é representada por números (ex: sistema RGB - Vermelho, Verde, Azul).<br><strong>Sons</strong> – Ondas sonoras são "amostradas" milhares de vezes por segundo, e a intensidade de cada amostra é salva como um número.</p>
+                        <div class="curiosidade">A palavra "byte" foi cunhada por Werner Buchholz em 1956, durante o desenvolvimento do computador IBM Stretch. Originalmente, poderia ter de 4 a 10 bits, mas foi padronizado em 8 bits.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/BwHTaEaI-YI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Quantos valores diferentes um único byte pode representar?</p>
+                            <select class="form-select" onchange="check(this,'256')"><option selected disabled></option><option>8</option><option>16</option><option>256</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Um byte (8 bits) pode representar 2^8 = 256 valores.</div><div class="quiz-feedback wrong">Incorreto. A resposta é 256 (2 elevado a 8).</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Qual padrão é usado para representar caracteres da maioria dos idiomas do mundo?</p>
+                            <select class="form-select" onchange="check(this,'Unicode')"><option selected disabled></option><option>ASCII</option><option>Unicode</option><option>RGB</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Unicode é o padrão global.</div><div class="quiz-feedback wrong">Incorreto. ASCII é limitado, Unicode é o padrão moderno.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. A cor de um pixel em uma imagem é comumente representada pelo sistema:</p>
+                            <select class="form-select" onchange="check(this,'RGB')"><option selected disabled></option><option>Ponto Flutuante</option><option>Binário</option><option>RGB</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ RGB (Red, Green, Blue) define as cores.</div><div class="quiz-feedback wrong">Incorreto. A resposta é RGB.</div>
                         </div>
                     </div>
                 </div>
@@ -398,7 +423,9 @@
     <p>© 2025 – Feito com carinho pelo Gemini • Tudo 100% funcional e completo agora!</p>
 </footer>
 
+<!-- A LINHA ESSENCIAL PARA AS ABAS FUNCIONAREM -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 // Função para feedback instantâneo nos mini-quizzes
 function check(e,correct){let f=e.nextElementSibling; let w=f.nextElementSibling; e.value===correct?(f.style.display='block',w.style.display='none'):(w.style.display='block',f.style.display='none');}
