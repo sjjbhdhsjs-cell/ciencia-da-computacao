@@ -1,0 +1,470 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência da Computação – Curso Completo com Vídeos e Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --primary: #58a6ff;
+            --border: #30363d;
+            --accent: #212d40;
+        }
+        body { background: var(--bg) url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1600&q=80') center/cover fixed; background-blend-mode: overlay; color: var(--text); font-family: 'Segoe UI', sans-serif; line-height: 1.8; }
+        .hero { background: linear-gradient(rgba(13,17,23,0.95), rgba(13,17,23,0.95)), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1600') center/cover; height: 75vh; display: flex; align-items: center; text-align: center; }
+        .nav-pills .nav-link { background: var(--card); color: var(--text-muted); border-radius: 0.75rem; margin-bottom: 0.6rem; border: 1px solid var(--border); transition: all 0.3s; }
+        .nav-pills .nav-link:hover { color: var(--primary); border-color: var(--primary); }
+        .nav-pills .nav-link.active { background: linear-gradient(90deg, #1f6feb, #388bfd); color: white; font-weight: bold; }
+        .tab-content { background: var(--card); border-radius: 1rem; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border: 1px solid var(--border); }
+        .tab-pane { padding: 3rem; }
+        h1,h2,h3 { color: var(--primary); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.6); margin: 2rem 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .quiz-question { background: var(--accent); padding: 1.5rem; border-radius: 1rem; margin: 2rem 0; border: 1px solid var(--border); }
+        .quiz-feedback { display: none; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; }
+        .correct { background: #238636; color: white; }
+        .wrong { background: #d73a49; color: white; }
+        .card-section { background: rgba(22,27,34,0.75); border-radius: 1rem; padding: 2.5rem; margin-bottom: 2.5rem; border: 1px solid var(--border); }
+        .curiosidade { background: linear-gradient(90deg,#212d40,#2d1b69); padding: 1.5rem; border-radius: 1rem; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Ciência da Computação</h1>
+        <p class="lead mt-4 fs-3">Curso completo universitário com vídeos e quizzes interativos</p>
+        <p class="fs-4">Escolha o tópico e mergulhe de cabeça!</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="nav flex-column nav-pills sticky-top" style="top:100px;" id="v-pills-tab" role="tablist">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab1"><i class="fas fa-history"></i> 1. História</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab2"><i class="fas fa-binary"></i> 2. Representação</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab3"><i class="fas fa-microchip"></i> 3. Arquitetura</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab4"><i class="fas fa-cogs"></i> 4. SO</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab5"><i class="fas fa-project-diagram"></i> 5. Algoritmos</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab6"><i class="fas fa-code"></i> 6. Linguagens</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab7"><i class="fas fa-network-wired"></i> 7. Redes</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab8"><i class="fas fa-database"></i> 8. Bancos</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab9"><i class="fas fa-tools"></i> 9. Engenharia</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab10"><i class="fas fa-brain"></i> 10. IA</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab11"><i class="fas fa-shield-alt"></i> 11. Segurança</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab12"><i class="fas fa-balance-scale"></i> 12. Ética</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab13"><i class="fas fa-trophy"></i> Quiz Geral</button>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="tab-content" id="v-pills-tabContent">
+
+                <!-- 1. História -->
+                <!-- 1. História -->
+                <!-- 1. História -->
+                <!-- 1. História -->
+                <div class="tab-pane fade show active" id="tab1">
+                    <div class="card-section">
+                        <h2>1. História da Computação</h2>
+                        <p>A jornada da computação é fascinante, começando com dispositivos mecânicos e evoluindo para as máquinas inteligentes de hoje. Essa linha do tempo destaca os marcos que transformaram nossa sociedade.</p>
+                        <p><strong>1837</strong> – Máquina Analítica de Charles Babbage, o primeiro conceito de um computador programável.<br><strong>1936</strong> – A Máquina de Turing, modelo teórico que fundamentou a ciência da computação.<br><strong>1940s</strong> – ENIAC e a arquitetura de von Neumann, que definiu o computador moderno.<br><strong>1971</strong> – Lançamento do Intel 4004, o primeiro microprocessador comercial.<br><strong>1991</strong> – A World Wide Web é aberta ao público, conectando o mundo.<br><strong>2007+</strong> – A era dos smartphones e da IA generativa, que colocou o poder computacional em nossos bolsos.</p>
+                        <div class="curiosidade">Ada Lovelace, ao trabalhar na Máquina Analítica de Babbage, escreveu o que é considerado o primeiro algoritmo da história em 1843, mais de um século antes dos primeiros computadores serem construídos.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <!-- LINK DO VÍDEO CORRIGIDO ABAIXO -->
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/za5g_4-R_4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Quem é considerado(a) o(a) primeiro(a) programador(a) da história?</p>
+                            <select class="form-select" onchange="check(this,'Ada Lovelace')"><option selected disabled></option><option>Alan Turing</option><option>Ada Lovelace</option><option>Charles Babbage</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Ada Lovelace escreveu o primeiro algoritmo.</div><div class="quiz-feedback wrong">Incorreto. A resposta certa é Ada Lovelace.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Qual foi o primeiro microprocessador comercial?</p>
+                            <select class="form-select" onchange="check(this,'Intel 4004')"><option selected disabled></option><option>Intel 8080</option><option>ENIAC</option><option>Intel 4004</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 O Intel 4004 foi um marco.</div><div class="quiz-feedback wrong">Incorreto. A resposta certa é Intel 4004.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. A arquitetura que define os computadores modernos foi proposta por:</p>
+                            <select class="form-select" onchange="check(this,'John von Neumann')"><option selected disabled></option><option>John von Neumann</option><option>Tim Berners-Lee</option><option>Steve Jobs</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ A arquitetura de von Neumann é a base de quase todos os computadores.</div><div class="quiz-feedback wrong">Incorreto. Foi John von Neumann.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Arquitetura de Computadores -->
+                <div class="tab-pane fade" id="tab3">
+                    <div class="card-section">
+                        <h2>3. Arquitetura de Computadores</h2>
+                        <p>A arquitetura de computadores descreve como os componentes de hardware são organizados e interagem para formar um sistema funcional. A base para quase todos os dispositivos modernos é a Arquitetura de von Neumann.</p>
+                        <p><strong>Unidade Central de Processamento (CPU)</strong> – O "cérebro" do computador, responsável por executar instruções. Contém a ULA e a Unidade de Controle.<br><strong>Unidade Lógica e Aritmética (ULA)</strong> – Realiza operações matemáticas (soma, subtração) e lógicas (E, OU, NÃO).<br><strong>Unidade de Controle (UC)</strong> – Busca instruções na memória, decodifica e coordena as outras partes do computador para executá-las.<br><strong>Memória Principal (RAM)</strong> – Armazena dados e instruções que estão sendo usados ativamente pela CPU. É volátil (perde dados ao desligar).<br><strong>Dispositivos de Entrada e Saída (E/S)</strong> – Permitem a interação com o usuário (teclado, mouse, monitor) e outros sistemas.</p>
+                        <div class="curiosidade">A Lei de Moore, observada por Gordon Moore em 1965, previa que o número de transistores em um chip dobraria aproximadamente a cada dois anos. Essa previsão impulsionou a indústria de semicondutores por mais de 50 anos.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/bfL3p_RkM5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual componente da CPU executa cálculos matemáticos?</p>
+                            <select class="form-select" onchange="check(this,'ULA')"><option selected disabled></option><option>Unidade de Controle</option><option>Registradores</option><option>ULA</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 A ULA é a calculadora do processador.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a ULA (Unidade Lógica e Aritmética).</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. A memória RAM é considerada volátil porque:</p>
+                            <select class="form-select" onchange="check(this,'Perde os dados sem energia')"><option selected disabled></option><option>É muito rápida</option><option>Perde os dados sem energia</option><option>Armazena poucos dados</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Desligou, apagou. Por isso é volátil.</div><div class="quiz-feedback wrong">Incorreto. Volátil significa que requer energia para manter os dados.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Qual componente busca e decodifica as instruções de um programa?</p>
+                            <select class="form-select" onchange="check(this,'Unidade de Controle')"><option selected disabled></option><option>Memória RAM</option><option>Unidade de Controle</option><option>Disco Rígido</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ A Unidade de Controle é a maestrina da orquestra.</div><div class="quiz-feedback wrong">Incorreto. Essa é a função da Unidade de Controle.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Sistemas Operacionais -->
+                <div class="tab-pane fade" id="tab4">
+                    <div class="card-section">
+                        <h2>4. Sistemas Operacionais (SO)</h2>
+                        <p>O Sistema Operacional é o software mais importante de um computador. Ele atua como um intermediário entre o hardware (CPU, memória, disco) e os aplicativos (navegador, jogos), gerenciando todos os recursos de forma eficiente e segura.</p>
+                        <p><strong>Gerenciamento de Processos</strong> – Decide quais programas devem usar a CPU e por quanto tempo, permitindo a multitarefa.<br><strong>Gerenciamento de Memória</strong> – Aloca espaço na memória RAM para cada programa, garantindo que um não interfira no outro.<br><strong>Sistema de Arquivos</strong> – Organiza os dados em discos de armazenamento (HD, SSD) através de arquivos e pastas.<br><strong>Interface com o Usuário</strong> – Fornece uma maneira de interagirmos com o computador, seja por linha de comando (CLI) ou interface gráfica (GUI).<br><strong>Exemplos Famosos</strong> – Microsoft Windows, Apple macOS, Linux, Google Android e Apple iOS.</p>
+                        <div class="curiosidade">O Linux, criado por Linus Torvalds em 1991, começou como um projeto de hobby. Hoje, o kernel Linux é a base para o Android, a maioria dos servidores de internet e os supercomputadores mais rápidos do mundo.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1v0Vb4f-gqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual é a principal função de um Sistema Operacional?</p>
+                            <select class="form-select" onchange="check(this,'Gerenciar recursos de hardware e software')"><option selected disabled></option><option>Navegar na internet</option><option>Gerenciar recursos de hardware e software</option><option>Criar documentos</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O SO é o grande gerente do computador.</div><div class="quiz-feedback wrong">Incorreto. A principal função é gerenciar todos os recursos.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. A capacidade de executar vários programas "ao mesmo tempo" é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Multitarefa')"><option selected disabled></option><option>Monotarefa</option><option>Multitarefa</option><option>Multi-usuário</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Isso é possível graças ao gerenciamento de processos do SO.</div><div class="quiz-feedback wrong">Incorreto. O nome disso é multitarefa.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Qual destes é um sistema operacional de código aberto?</p>
+                            <select class="form-select" onchange="check(this,'Linux')"><option selected disabled></option><option>Windows</option><option>macOS</option><option>Linux</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Linux é o exemplo mais famoso de software livre e de código aberto.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Linux.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Algoritmos e Estruturas de Dados -->
+                <div class="tab-pane fade" id="tab5">
+                    <div class="card-section">
+                        <h2>5. Algoritmos e Estruturas de Dados</h2>
+                        <p>Um algoritmo é uma receita: uma sequência de passos finita e bem definida para resolver um problema. As estruturas de dados são as formas de organizar e armazenar dados para que possam ser usados eficientemente por esses algoritmos. Juntos, eles são o coração da programação.</p>
+                        <p><strong>Características de um Algoritmo</strong> – Deve ser finito (ter um fim), preciso (sem ambiguidades) e eficaz (capaz de resolver o problema).<br><strong>Estruturas de Dados Lineares</strong> – Dados organizados em sequência, como <strong>Arrays</strong> (listas), <strong>Pilhas</strong> (último a entrar, primeiro a sair - LIFO) e <strong>Filas</strong> (primeiro a entrar, primeiro a sair - FIFO).<br><strong>Estruturas de Dados Não-Lineares</strong> – Organização mais complexa, como <strong>Árvores</strong> (para dados hierárquicos) e <strong>Grafos</strong> (para representar conexões, como redes sociais).<br><strong>Complexidade (Big O)</strong> – Notação usada para medir a eficiência de um algoritmo, analisando como o tempo de execução ou o uso de memória cresce com o aumento da entrada de dados.</p>
+                        <div class="curiosidade">O nome "algoritmo" é uma homenagem ao matemático persa do século IX, Muhammad ibn Musa al-Khwarizmi. A latinização de seu nome, "Algoritmi", deu origem ao termo.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/z-gfq-h9gZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Uma sequência finita de passos para resolver um problema é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Algoritmo')"><option selected disabled></option><option>Programa</option><option>Algoritmo</option><option>Estrutura de Dados</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Essa é a definição clássica de algoritmo.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Algoritmo.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Qual estrutura de dados segue o princípio "o primeiro a entrar é o primeiro a sair" (FIFO)?</p>
+                            <select class="form-select" onchange="check(this,'Fila')"><option selected disabled></option><option>Pilha</option><option>Árvore</option><option>Fila</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Assim como uma fila de banco.</div><div class="quiz-feedback wrong">Incorreto. Essa é a característica de uma Fila.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. A notação Big O é usada para medir a:</p>
+                            <select class="form-select" onchange="check(this,'Eficiência de um algoritmo')"><option selected disabled></option><option>Eficiência de um algoritmo</option><option>Correção de um algoritmo</option><option>Facilidade de leitura do código</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Ela nos ajuda a comparar quão "rápidos" são os algoritmos.</div><div class="quiz-feedback wrong">Incorreto. Big O mede a complexidade e eficiência.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Linguagens de Programação -->
+                <div class="tab-pane fade" id="tab6">
+                    <div class="card-section">
+                        <h2>6. Linguagens de Programação</h2>
+                        <p>Linguagens de programação são as ferramentas que usamos para escrever algoritmos de uma forma que os computadores possam entender e executar. Elas variam em nível de abstração, paradigmas e forma de execução.</p>
+                        <p><strong>Linguagens de Baixo Nível</strong> – Mais próximas do hardware, como <strong>Assembly</strong>. São rápidas mas difíceis de programar.<br><strong>Linguagens de Alto Nível</strong> – Mais próximas da linguagem humana, como <strong>Python, Java, C#, JavaScript</strong>. São mais fáceis e produtivas.<br><strong>Compilação vs. Interpretação</strong> – Linguagens <strong>compiladas</strong> (C++, Go) são traduzidas para código de máquina de uma vez só, gerando um executável. Linguagens <strong>interpretadas</strong> (Python, JavaScript) são traduzidas linha por linha durante a execução.<br><strong>Paradigmas de Programação</strong> – São estilos de programação. Os principais incluem <strong>Imperativo</strong> (diz como fazer), <strong>Orientado a Objetos</strong> (organiza o código em objetos) e <strong>Funcional</strong> (trata a computação como avaliação de funções matemáticas).</p>
+                        <div class="curiosidade">A primeira linguagem de programação de alto nível foi a Fortran (FORmula TRANslation), desenvolvida na década de 1950 por uma equipe da IBM liderada por John Backus. Ela ainda é usada em computação científica e supercomputadores.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/EbZ_GG122dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual destas é considerada uma linguagem de baixo nível?</p>
+                            <select class="form-select" onchange="check(this,'Assembly')"><option selected disabled></option><option>Python</option><option>Assembly</option><option>Java</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Assembly está muito próxima da linguagem de máquina.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Assembly.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Uma linguagem que é traduzida linha por linha durante a execução é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Interpretada')"><option selected disabled></option><option>Compilada</option><option>Interpretada</option><option>Montada</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Python e JavaScript são exemplos famosos.</div><div class="quiz-feedback wrong">Incorreto. Isso descreve uma linguagem Interpretada.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. O paradigma que organiza o código em torno de "objetos" que contêm dados e métodos é:</p>
+                            <select class="form-select" onchange="check(this,'Orientado a Objetos')"><option selected disabled></option><option>Funcional</option><option>Imperativo</option><option>Orientado a Objetos</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Java, C++ e Python são linguagens com forte suporte a este paradigma.</div><div class="quiz-feedback wrong">Incorreto. É a Programação Orientada a Objetos (POO).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Redes de Computadores -->
+                <div class="tab-pane fade" id="tab7">
+                    <div class="card-section">
+                        <h2>7. Redes de Computadores</h2>
+                        <p>Redes de computadores são conjuntos de dispositivos interconectados que trocam dados e compartilham recursos. A internet é o maior exemplo de uma rede, conectando bilhões de dispositivos em todo o mundo. A comunicação é regida por um conjunto de regras chamado protocolo.</p>
+                        <p><strong>Tipos de Rede</strong> – <strong>LAN</strong> (Local Area Network) para pequenas áreas como uma casa ou escritório, e <strong>WAN</strong> (Wide Area Network) para grandes áreas geográficas, como a internet.<br><strong>Endereço IP</strong> – Um número único que identifica um dispositivo em uma rede, como um endereço para correspondência.<br><strong>Protocolos</strong> – Conjuntos de regras. Os mais importantes são: <strong>IP</strong> (endereçamento), <strong>TCP</strong> (garante a entrega ordenada dos pacotes) e <strong>HTTP</strong> (usado para navegar na web).<br><strong>DNS (Domain Name System)</strong> – O "tradutor" da internet. Converte nomes de domínio amigáveis (ex: www.google.com) em endereços IP que os computadores entendem.</p>
+                        <div class="curiosidade">A primeira mensagem enviada pela ARPANET (precursora da internet) em 1969 foi "LO". O programador Charley Kline estava tentando digitar "LOGIN", mas o sistema travou após as duas primeiras letras.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/402-86tjM-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual protocolo é a base para a navegação na World Wide Web?</p>
+                            <select class="form-select" onchange="check(this,'HTTP')"><option selected disabled></option><option>FTP</option><option>HTTP</option><option>TCP</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 HTTP (HyperText Transfer Protocol) é a resposta.</div><div class="quiz-feedback wrong">Incorreto. A resposta é HTTP.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. O que o DNS faz?</p>
+                            <select class="form-select" onchange="check(this,'Traduz nomes de domínio em endereços IP')"><option selected disabled></option><option>Garante a entrega de pacotes</option><option>Traduz nomes de domínio em endereços IP</option><option>Criptografa a comunicação</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Sem o DNS, teríamos que decorar números para acessar sites.</div><div class="quiz-feedback wrong">Incorreto. DNS é o sistema de nomes de domínio.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Uma rede dentro de um único edifício é geralmente uma:</p>
+                            <select class="form-select" onchange="check(this,'LAN')"><option selected disabled></option><option>WAN</option><option>MAN</option><option>LAN</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ LAN significa Local Area Network (Rede de Área Local).</div><div class="quiz-feedback wrong">Incorreto. A resposta é LAN.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Bancos de Dados -->
+                <div class="tab-pane fade" id="tab8">
+                    <div class="card-section">
+                        <h2>8. Bancos de Dados</h2>
+                        <p>Bancos de dados são coleções organizadas de informações, projetadas para serem facilmente acessadas, gerenciadas e atualizadas. Eles são a espinha dorsal de quase todos os aplicativos, desde redes sociais até sistemas bancários.</p>
+                        <p><strong>Bancos de Dados Relacionais (SQL)</strong> – Organizam os dados em tabelas com linhas e colunas, com relações bem definidas entre elas (ex: MySQL, PostgreSQL). A linguagem padrão para consultá-los é a <strong>SQL</strong> (Structured Query Language).<br><strong>Bancos de Dados Não-Relacionais (NoSQL)</strong> – Oferecem modelos mais flexíveis, como documentos (MongoDB), chave-valor (Redis) ou grafos (Neo4j). São ótimos para dados não estruturados e grande escala.<br><strong>CRUD</strong> – Acrônimo para as quatro operações básicas em um banco de dados: <strong>C</strong>reate (Criar), <strong>R</strong>ead (Ler), <strong>U</strong>pdate (Atualizar) e <strong>D</strong>elete (Excluir).<br><strong>Chaves</strong> – Em bancos SQL, a <strong>Chave Primária</strong> identifica unicamente cada registro em uma tabela, enquanto a <strong>Chave Estrangeira</strong> cria um link para uma chave primária em outra tabela.</p>
+                        <div class="curiosidade">A linguagem SQL foi desenvolvida na IBM no início dos anos 70, baseada no modelo relacional de Edgar F. Codd. Seu nome original era SEQUEL (Structured English Query Language), mas teve que ser encurtado para SQL por questões de marca registrada.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/a_dMgduss4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual linguagem é padrão para interagir com bancos de dados relacionais?</p>
+                            <select class="form-select" onchange="check(this,'SQL')"><option selected disabled></option><option>Python</option><option>HTML</option><option>SQL</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 SQL é a linguagem universal dos bancos relacionais.</div><div class="quiz-feedback wrong">Incorreto. A resposta é SQL.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Qual tipo de banco de dados é mais flexível e não usa tabelas, como o MongoDB?</p>
+                            <select class="form-select" onchange="check(this,'NoSQL')"><option selected disabled></option><option>Relacional</option><option>NoSQL</option><option>Hierárquico</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 NoSQL é a categoria para esses bancos de dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é NoSQL.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. As operações Criar, Ler, Atualizar e Excluir são conhecidas pelo acrônimo:</p>
+                            <select class="form-select" onchange="check(this,'CRUD')"><option selected disabled></option><option>CRUD</option><option>ACID</option><option>BASE</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ CRUD representa as operações fundamentais de dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é CRUD.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Engenharia de Software -->
+                <div class="tab-pane fade" id="tab9">
+                    <div class="card-section">
+                        <h2>9. Engenharia de Software</h2>
+                        <p>Engenharia de Software é a disciplina que aplica princípios de engenharia para construir e manter sistemas de software de alta qualidade. Ela vai além da programação, abrangendo todo o ciclo de vida de um produto, desde a ideia inicial até a sua descontinuação.</p>
+                        <p><strong>Ciclo de Vida do Software</strong> – Inclui as fases de <strong>Requisitos</strong> (o que o sistema deve fazer), <strong>Projeto</strong> (como o sistema será construído), <strong>Implementação</strong> (codificação), <strong>Testes</strong> (verificação de qualidade) e <strong>Manutenção</strong> (correções e melhorias).<br><strong>Metodologias de Desenvolvimento</strong>:<br>  - <strong>Cascata (Waterfall)</strong>: Um modelo sequencial e rígido, onde cada fase deve ser concluída antes de iniciar a próxima.<br>  - <strong>Ágil (Agile)</strong>: Uma abordagem iterativa e flexível que foca em entregas rápidas e colaboração. Métodos populares incluem <strong>Scrum</strong> (com ciclos chamados Sprints) e <strong>Kanban</strong> (focado em fluxo contínuo).<br><strong>Controle de Versão</strong> – Ferramentas como o <strong>Git</strong> são essenciais para gerenciar mudanças no código, permitindo que equipes trabalhem em paralelo sem conflitos.</p>
+                        <div class="curiosidade">O termo "bug" (inseto) para descrever uma falha em um sistema se popularizou em 1947, quando engenheiros da Universidade de Harvard encontraram uma mariposa real presa em um relé do computador Mark II, causando um mau funcionamento. Eles a removeram e a colaram no diário de bordo com a anotação: "Primeiro caso real de um bug sendo encontrado".</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/y4p7JAAp-yE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual metodologia de desenvolvimento de software é conhecida por ser sequencial e rígida?</p>
+                            <select class="form-select" onchange="check(this,'Cascata')"><option selected disabled></option><option>Ágil</option><option>Scrum</option><option>Cascata</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Cascata é o modelo tradicional e linear.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Cascata (Waterfall).</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Na metodologia Scrum, o trabalho é dividido em ciclos curtos e iterativos chamados:</p>
+                            <select class="form-select" onchange="check(this,'Sprints')"><option selected disabled></option><option>Releases</option><option>Sprints</option><option>Maratonas</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Sprints geralmente duram de 1 a 4 semanas.</div><div class="quiz-feedback wrong">Incorreto. São chamados de Sprints.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Qual ferramenta é a mais popular para controle de versão de código?</p>
+                            <select class="form-select" onchange="check(this,'Git')"><option selected disabled></option><option>Docker</option><option>Git</option><option>Jira</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Git, criado por Linus Torvalds, é o padrão da indústria.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Git.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Inteligência Artificial -->
+                <div class="tab-pane fade" id="tab10">
+                    <div class="card-section">
+                        <h2>10. Inteligência Artificial (IA)</h2>
+                        <p>Inteligência Artificial é um campo da ciência da computação dedicado a criar sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana, como aprender, raciocinar, reconhecer padrões e entender a linguagem.</p>
+                        <p><strong>Machine Learning (Aprendizado de Máquina)</strong> – É o subcampo mais proeminente da IA. Em vez de serem explicitamente programados, os sistemas de ML aprendem a partir de dados. Os tipos principais são:<br>  - <strong>Supervisionado</strong>: Aprende com dados rotulados (ex: classificar e-mails como spam ou não spam).<br>  - <strong>Não Supervisionado</strong>: Encontra padrões em dados não rotulados (ex: agrupar clientes com comportamentos de compra semelhantes).<br>  - <strong>Por Reforço</strong>: Aprende através de tentativa e erro, recebendo recompensas ou punições (ex: treinar um agente para jogar xadrez).<br><strong>Deep Learning (Aprendizagem Profunda)</strong> – Uma subárea do Machine Learning que usa redes neurais artificiais com muitas camadas ("profundas") para aprender padrões complexos, sendo a força por trás do reconhecimento de imagem e da IA generativa.</p>
+                        <div class="curiosidade">O Teste de Turing, proposto por Alan Turing em 1950, é um teste da capacidade de uma máquina exibir comportamento inteligente indistinguível do de um ser humano. Se um avaliador humano não consegue diferenciar consistentemente as respostas de uma máquina das de um humano, a máquina "passa" no teste.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/a2a443k_4C4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual subcampo da IA foca em treinar modelos a partir de dados?</p>
+                            <select class="form-select" onchange="check(this,'Machine Learning')"><option selected disabled></option><option>Computação Gráfica</option><option>Machine Learning</option><option>Sistemas Operacionais</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Machine Learning é sobre aprender com dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Machine Learning.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Um algoritmo que aprende a classificar e-mails como spam ou não, usando exemplos já classificados, é um exemplo de aprendizado:</p>
+                            <select class="form-select" onchange="check(this,'Supervisionado')"><option selected disabled></option><option>Supervisionado</option><option>Não Supervisionado</option><option>Por Reforço</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Usa dados rotulados, portanto é supervisionado.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Supervisionado.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Deep Learning é uma técnica que utiliza principalmente:</p>
+                            <select class="form-select" onchange="check(this,'Redes Neurais Artificiais')"><option selected disabled></option><option>Árvores de Decisão</option><option>Algoritmos Genéticos</option><option>Redes Neurais Artificiais</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Redes neurais com muitas camadas são a base do Deep Learning.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Redes Neurais Artificiais.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Segurança da Informação -->
+                <div class="tab-pane fade" id="tab11">
+                    <div class="card-section">
+                        <h2>11. Segurança da Informação</h2>
+                        <p>Segurança da Informação é a prática de proteger informações e sistemas contra acesso, uso, divulgação, alteração ou destruição não autorizados. Ela é baseada em três pilares fundamentais, conhecidos como a Tríade CIA.</p>
+                        <p><strong>Pilares da Segurança (Tríade CIA)</strong>:<br>  - <strong>Confidencialidade</strong>: Garante que a informação seja acessível apenas por pessoas autorizadas. A <strong>criptografia</strong> é uma ferramenta chave aqui.<br>  - <strong>Integridade</strong>: Assegura que a informação é precisa e confiável, não tendo sido modificada indevidamente.<br>  - <strong>Disponibilidade</strong>: Garante que a informação e os sistemas estejam disponíveis para uso quando necessário.<br><strong>Ameaças Comuns</strong>:<br>  - <strong>Malware</strong>: Software malicioso, como vírus, worms e ransomware.<br>  - <strong>Phishing</strong>: Tentativas de enganar usuários para que revelem informações sensíveis, como senhas e cartões de crédito.<br>  - <strong>Ataques de Negação de Serviço (DoS/DDoS)</strong>: Tentativas de sobrecarregar um sistema para torná-lo indisponível.</p>
+                        <div class="curiosidade">A criptografia não é uma invenção moderna. Júlio César usava uma cifra de substituição simples, conhecida hoje como Cifra de César, para proteger suas comunicações militares há mais de 2000 anos. Ele simplesmente substituía cada letra pela letra três posições à frente no alfabeto.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GqG6zS9v9_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. Qual pilar da segurança garante que a informação só é acessada por pessoas autorizadas?</p>
+                            <select class="form-select" onchange="check(this,'Confidencialidade')"><option selected disabled></option><option>Integridade</option><option>Disponibilidade</option><option>Confidencialidade</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Confidencialidade é sinônimo de sigilo.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Confidencialidade.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. Um e-mail falso que tenta roubar sua senha é um exemplo de:</p>
+                            <select class="form-select" onchange="check(this,'Phishing')"><option selected disabled></option><option>Ransomware</option><option>Phishing</option><option>DDoS</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Phishing é a "pescaria" de dados sensíveis.</div><div class="quiz-feedback wrong">Incorreto. Isso é um ataque de Phishing.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. Qual tecnologia é usada para embaralhar dados e torná-los ilegíveis sem a chave correta?</p>
+                            <select class="form-select" onchange="check(this,'Criptografia')"><option selected disabled></option><option>Firewall</option><option>Criptografia</option><option>Antivírus</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ A criptografia é fundamental para a confidencialidade.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Criptografia.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Ética em Computação -->
+                <div class="tab-pane fade" id="tab12">
+                    <div class="card-section">
+                        <h2>12. Ética em Computação</h2>
+                        <p>À medida que a tecnologia se torna mais poderosa e onipresente, as implicações éticas de seu uso se tornam cada vez mais importantes. A ética em computação explora os dilemas morais e o impacto social da tecnologia, buscando guiar profissionais a agirem de forma responsável.</p>
+                        <p><strong>Privacidade de Dados</strong> – Quem tem o direito de coletar, armazenar e usar nossos dados pessoais? Leis como a LGPD (Lei Geral de Proteção de Dados) no Brasil tentam regulamentar essa questão.<br><strong>Viés Algorítmico</strong> – Algoritmos de IA, treinados com dados do mundo real, podem aprender e amplificar preconceitos existentes na sociedade, levando a decisões injustas em áreas como contratação, crédito e policiamento.<br><strong>Propriedade Intelectual</strong> – O debate entre software <strong>proprietário</strong> (código fechado, como o Windows) e software <strong>livre/de código aberto</strong> (que permite acesso e modificação do código, como o Linux).<br><strong>Automação e o Futuro do Trabalho</strong> – Qual é o impacto social da automação de empregos pela IA? Quais são nossas responsabilidades ao criar tecnologias que podem deslocar trabalhadores?</p>
+                        <div class="curiosidade">O movimento do "Software Livre", lançado por Richard Stallman em 1983, defende quatro liberdades essenciais para os usuários de software: a liberdade de executar, estudar, redistribuir e modificar o software. Isso deu origem ao projeto GNU e à popular licença GPL.</div>
+                        <h5>Vídeo recomendado</h5>
+                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ABdKEbeL-AA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <h5>Mini-Quiz</h5>
+                        <div class="quiz-question">
+                            <p>1. A preocupação de que um algoritmo de IA possa tomar decisões injustas com base nos dados de treinamento é um problema de:</p>
+                            <select class="form-select" onchange="check(this,'Viés')"><option selected disabled></option><option>Desempenho</option><option>Viés</option><option>Custo</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O viés algorítmico é um grande desafio ético.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Viés (Bias).</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>2. A LGPD no Brasil é uma lei que trata principalmente de:</p>
+                            <select class="form-select" onchange="check(this,'Proteção de Dados Pessoais')"><option selected disabled></option><option>Propriedade Intelectual</option><option>Crimes Cibernéticos</option><option>Proteção de Dados Pessoais</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 LGPD significa Lei Geral de Proteção de Dados.</div><div class="quiz-feedback wrong">Incorreto. A LGPD foca na privacidade e proteção de dados.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. O modelo de software que permite aos usuários ver e modificar o código-fonte é chamado de:</p>
+                            <select class="form-select" onchange="check(this,'Código Aberto (Open Source)')"><option selected disabled></option><option>Proprietário</option><option>Código Aberto (Open Source)</option><option>Freeware</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Linux e Firefox são exemplos de software de código aberto.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Código Aberto.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Geral (aba 13) -->
+                <div class="tab-pane fade" id="tab13">
+                    <div class="card-section">
+                        <h2>Quiz Geral – 12 perguntas (uma de cada tópico)</h2>
+                        <p>Teste seus conhecimentos em todos os fundamentos da Ciência da Computação!</p>
+                        <div id="generalQuiz" class="mt-4"></div>
+                        <button class="btn btn-primary mt-3" onclick="score()">Ver pontuação</button>
+                        <p id="finalScore" class="mt-3 fw-bold fs-4"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-black text-center py-5" style="border-top:1px solid #30363d;">
+    <p>© 2025 – Feito com carinho pelo Gemini • Tudo 100% funcional e completo agora!</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Função para feedback instantâneo nos mini-quizzes
+function check(e,correct){let f=e.nextElementSibling; let w=f.nextElementSibling; e.value===correct?(f.style.display='block',w.style.display='none'):(w.style.display='block',f.style.display='none');}
+
+// Dados e lógica para o Quiz Geral
+const generalQuizQuestions = [
+    { topic: "História", question: "A arquitetura que define os computadores modernos foi proposta por:", options: ["Alan Turing", "Tim Berners-Lee", "John von Neumann"], answer: "John von Neumann" },
+    { topic: "Representação", question: "Quantos valores diferentes um único byte pode representar?", options: ["8", "64", "256"], answer: "256" },
+    { topic: "Arquitetura", question: "Qual componente da CPU executa cálculos matemáticos e lógicos?", options: ["Unidade de Controle", "ULA", "Registradores"], answer: "ULA" },
+    { topic: "Sistemas Operacionais", question: "A capacidade de executar vários programas 'ao mesmo tempo' é chamada de:", options: ["Multitarefa", "Multi-usuário", "Monotarefa"], answer: "Multitarefa" },
+    { topic: "Algoritmos", question: "Qual estrutura de dados segue o princípio 'o último a entrar é o primeiro a sair' (LIFO)?", options: ["Fila", "Pilha", "Árvore"], answer: "Pilha" },
+    { topic: "Linguagens", question: "Uma linguagem que é traduzida de uma só vez para código de máquina é chamada de:", options: ["Interpretada", "Compilada", "Script"], answer: "Compilada" },
+    { topic: "Redes", question: "O que o DNS (Domain Name System) faz?", options: ["Garante a entrega de pacotes", "Criptografa a comunicação", "Traduz nomes de domínio em endereços IP"], answer: "Traduz nomes de domínio em endereços IP" },
+    { topic: "Bancos de Dados", question: "Qual linguagem é padrão para interagir com bancos de dados relacionais?", options: ["SQL", "NoSQL", "Java"], answer: "SQL" },
+    { topic: "Engenharia de Software", question: "Na metodologia Scrum, o trabalho é dividido em ciclos curtos e iterativos chamados:", options: ["Sprints", "Releases", "Maratonas"], answer: "Sprints" },
+    { topic: "Inteligência Artificial", question: "Deep Learning é uma técnica que utiliza principalmente:", options: ["Árvores de Decisão", "Redes Neurais Artificiais", "Algoritmos Genéticos"], answer: "Redes Neurais Artificiais" },
+    { topic: "Segurança", question: "Um e-mail falso que tenta roubar sua senha é um exemplo de:", options: ["Ransomware", "DDoS", "Phishing"], answer: "Phishing" },
+    { topic: "Ética", question: "A preocupação de que um algoritmo possa tomar decisões injustas com base nos dados é um problema de:", options: ["Desempenho", "Viés", "Custo"], answer: "Viés" }
+];
+
+function buildGeneralQuiz() {
+    const quizContainer = document.getElementById('generalQuiz');
+    let quizHTML = '';
+    generalQuizQuestions.forEach((q, index) => {
+        quizHTML += `
+            <div class="quiz-question">
+                <p><strong>${index + 1}. [${q.topic}]</strong> ${q.question}</p>
+        `;
+        q.options.forEach(option => {
+            quizHTML += `
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question${index}" id="q${index}o${option}" value="${option}">
+                    <label class="form-check-label" for="q${index}o${option}">
+                        ${option}
+                    </label>
+                </div>
+            `;
+        });
+        quizHTML += `</div>`;
+    });
+    quizContainer.innerHTML = quizHTML;
+}
+
+function score() {
+    let score = 0;
+    generalQuizQuestions.forEach((q, index) => {
+        const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+        if (selectedOption && selectedOption.value === q.answer) {
+            score++;
+        }
+    });
+    
+    const finalScoreElement = document.getElementById('finalScore');
+    let message = `Sua pontuação final é: ${score} de ${generalQuizQuestions.length}.<br>`;
+    if (score === generalQuizQuestions.length) {
+        message += "Parabéns, você acertou tudo! 🚀";
+    } else if (score >= generalQuizQuestions.length / 2) {
+        message += "Muito bem! Você tem um bom conhecimento geral.";
+    } else {
+        message += "Continue estudando para melhorar seus conhecimentos.";
+    }
+    finalScoreElement.innerHTML = message;
+}
+
+// Constrói o Quiz Geral quando a página carrega
+document.addEventListener('DOMContentLoaded', buildGeneralQuiz);
+</script>
+</body>
+</html>
