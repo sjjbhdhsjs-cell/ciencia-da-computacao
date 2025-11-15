@@ -24,8 +24,6 @@
         .tab-content { background: var(--card); border-radius: 1rem; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border: 1px solid var(--border); }
         .tab-pane { padding: 3rem; }
         h1,h2,h3 { color: var(--primary); }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.6); margin: 2rem 0; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .quiz-question { background: var(--accent); padding: 1.5rem; border-radius: 1rem; margin: 2rem 0; border: 1px solid var(--border); }
         .quiz-feedback { display: none; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; }
         .correct { background: #238636; color: white; }
@@ -71,26 +69,33 @@
                 <div class="tab-pane fade show active" id="tab1">
                     <div class="card-section">
                         <h2>1. História da Computação</h2>
-                        <p>A jornada da computação é fascinante, começando com dispositivos mecânicos e evoluindo para as máquinas inteligentes de hoje. Essa linha do tempo destaca os marcos que transformaram nossa sociedade.</p>
-                        <p><strong>1837</strong> – Máquina Analítica de Charles Babbage, o primeiro conceito de um computador programável.<br><strong>1936</strong> – A Máquina de Turing, modelo teórico que fundamentou a ciência da computação.<br><strong>1940s</strong> – ENIAC e a arquitetura de von Neumann, que definiu o computador moderno.<br><strong>1971</strong> – Lançamento do Intel 4004, o primeiro microprocessador comercial.<br><strong>1991</strong> – A World Wide Web é aberta ao público, conectando o mundo.<br><strong>2007+</strong> – A era dos smartphones e da IA generativa, que colocou o poder computacional em nossos bolsos.</p>
-                        <div class="curiosidade">Ada Lovelace, ao trabalhar na Máquina Analítica de Babbage, escreveu o que é considerado o primeiro algoritmo da história em 1843, mais de um século antes dos primeiros computadores serem construídos.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/za5g_4-R_4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>A história da computação é uma jornada de séculos, marcada pela necessidade humana de calcular e processar informações. Começando com o Ábaco (c. 2500 a.C.), a evolução passou por marcos como o Tear de Jacquard (1804), que usava cartões perfurados para automatizar padrões têxteis, um conceito fundamental para a programação.</p>
+                        <p>Os principais marcos teóricos e práticos que definiram a era moderna são:</p>
+                        <p><strong>1837 - Máquina Analítica:</strong> Concebida por Charles Babbage, foi o primeiro projeto de um computador mecânico de propósito geral. Embora nunca construída em sua totalidade, seus conceitos de memória (o "armazém") e processador (o "engenho") são a base da arquitetura moderna.<br>
+                        <strong>1890 - Máquina de Tabulação:</strong> Herman Hollerith criou uma máquina eletromecânica que usava cartões perfurados para tabular os dados do censo dos EUA, reduzindo o trabalho de uma década para cerca de um ano. Sua empresa se tornaria a IBM.<br>
+                        <strong>1936 - Máquina de Turing:</strong> Alan Turing propôs um modelo matemático abstrato de um computador, definindo os limites teóricos do que pode ser computado. Este é o fundamento da Ciência da Computação.<br>
+                        <strong>1940s - A Era Eletrônica:</strong> Surgem os primeiros computadores eletrônicos, como o ENIAC, que usava válvulas a vácuo. John von Neumann propõe a "arquitetura de von Neumann", onde dados e programas são armazenados na mesma memória, um padrão usado até hoje.<br>
+                        <strong>1947 - O Transistor:</strong> A invenção do transistor nos Laboratórios Bell foi a revolução que permitiu a miniaturização. Ele substituiu as frágeis e grandes válvulas, tornando os computadores menores, mais rápidos e mais confiáveis.<br>
+                        <strong>1958 - Circuito Integrado (Chip):</strong> Jack Kilby e Robert Noyce, de forma independente, criaram o circuito integrado, colocando múltiplos transistores em uma única peça de silício. Isso abriu caminho para a produção em massa e a Lei de Moore.<br>
+                        <strong>1971 - Microprocessador:</strong> A Intel lança o 4004, o primeiro microprocessador comercial, colocando uma CPU inteira em um único chip. Isso deu origem aos computadores pessoais.<br>
+                        <strong>1991 - World Wide Web:</strong> Tim Berners-Lee abre a Web ao público, transformando a computação de uma ferramenta de nicho para um fenômeno global de comunicação.<br>
+                        <strong>2007+ - Era Mobile e da IA:</strong> O lançamento do iPhone populariza os smartphones, e avanços em IA, especialmente com redes neurais profundas, dão início à era da IA generativa.</p>
+                        <div class="curiosidade">Ada Lovelace, ao documentar a Máquina Analítica de Babbage, escreveu notas que incluíam um algoritmo para calcular a Sequência de Bernoulli. Por isso, ela é considerada a primeira programadora da história, muito antes de um computador funcional existir.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Quem é considerado(a) o(a) primeiro(a) programador(a) da história?</p>
-                            <select class="form-select" onchange="check(this,'Ada Lovelace')"><option selected disabled></option><option>Alan Turing</option><option>Ada Lovelace</option><option>Charles Babbage</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Ada Lovelace escreveu o primeiro algoritmo.</div><div class="quiz-feedback wrong">Incorreto. A resposta certa é Ada Lovelace.</div>
+                            <p>1. Que invenção de 1804 usou cartões perfurados para controlar uma máquina, influenciando futuras linguagens de programação?</p>
+                            <select class="form-select" onchange="check(this,'Tear de Jacquard')"><option selected disabled></option><option>Máquina de Turing</option><option>Tear de Jacquard</option><option>ENIAC</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O Tear de Jacquard foi um pioneiro na automação programável.</div><div class="quiz-feedback wrong">Incorreto. A resposta é o Tear de Jacquard.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Qual foi o primeiro microprocessador comercial?</p>
-                            <select class="form-select" onchange="check(this,'Intel 4004')"><option selected disabled></option><option>Intel 8080</option><option>ENIAC</option><option>Intel 4004</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 O Intel 4004 foi um marco.</div><div class="quiz-feedback wrong">Incorreto. A resposta certa é Intel 4004.</div>
+                            <p>2. A empresa fundada por Herman Hollerith para processar o censo dos EUA se tornaria qual gigante da tecnologia?</p>
+                            <select class="form-select" onchange="check(this,'IBM')"><option selected disabled></option><option>Microsoft</option><option>Apple</option><option>IBM</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A Tabulating Machine Company evoluiu para se tornar a IBM.</div><div class="quiz-feedback wrong">Incorreto. A resposta certa é IBM.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. A arquitetura que define os computadores modernos foi proposta por:</p>
-                            <select class="form-select" onchange="check(this,'John von Neumann')"><option selected disabled></option><option>John von Neumann</option><option>Tim Berners-Lee</option><option>Steve Jobs</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ A arquitetura de von Neumann é a base de quase todos os computadores.</div><div class="quiz-feedback wrong">Incorreto. Foi John von Neumann.</div>
+                            <p>3. Qual componente eletrônico substituiu as válvulas a vácuo e permitiu a criação de computadores menores e mais eficientes?</p>
+                            <select class="form-select" onchange="check(this,'Transistor')"><option selected disabled></option><option>Microprocessador</option><option>Transistor</option><option>Circuito Integrado</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ O transistor, inventado em 1947, foi o ponto de virada para a computação moderna.</div><div class="quiz-feedback wrong">Incorreto. Foi o Transistor.</div>
                         </div>
                     </div>
                 </div>
@@ -99,26 +104,31 @@
                 <div class="tab-pane fade" id="tab2">
                     <div class="card-section">
                         <h2>2. Representação de Dados</h2>
-                        <p>Computadores não entendem letras, imagens ou sons como nós. Tudo é convertido para um formato que eles podem processar: números binários (0s e 1s). Entender como essa tradução ocorre é fundamental.</p>
-                        <p><strong>Bits e Bytes</strong> – O bit é a menor unidade de informação (0 ou 1). Um conjunto de 8 bits forma um byte.<br><strong>Textos</strong> – Caracteres são mapeados para números através de padrões como ASCII (para o inglês) e Unicode (que suporta quase todos os idiomas do mundo).<br><strong>Números</strong> – Inteiros são convertidos diretamente para binário. Números com frações usam o padrão de ponto flutuante.<br><strong>Imagens</strong> – São divididas em uma grade de pixels. A cor de cada pixel é representada por números (ex: sistema RGB - Vermelho, Verde, Azul).<br><strong>Sons</strong> – Ondas sonoras são "amostradas" milhares de vezes por segundo, e a intensidade de cada amostra é salva como um número.</p>
-                        <div class="curiosidade">A palavra "byte" foi cunhada por Werner Buchholz em 1956, durante o desenvolvimento do computador IBM Stretch. Originalmente, poderia ter de 4 a 10 bits, mas foi padronizado em 8 bits.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/BwHTaEaI-YI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Fundamentalmente, um computador é uma máquina que manipula símbolos. No entanto, sua eletrônica opera de forma binária, com circuitos que estão ligados (representando o dígito 1) ou desligados (representando o dígito 0). Portanto, toda e qualquer informação — de textos a vídeos — deve ser traduzida para essa linguagem de 0s e 1s.</p>
+                        <p><strong>Bits, Bytes e Sistemas Numéricos:</strong><br>
+                        - <strong>Bit (Binary Digit):</strong> É a menor unidade de informação, podendo ser 0 ou 1.<br>
+                        - <strong>Byte:</strong> Um conjunto de 8 bits. Com 8 bits, é possível formar 2^8 = 256 combinações diferentes. Um byte é a unidade básica para representar um caractere.<br>
+                        - <strong>Hexadecimal:</strong> Como sequências longas de 0s e 1s são difíceis para humanos lerem, usa-se o sistema hexadecimal (base 16), que agrupa 4 bits em um único símbolo (0-9 e A-F). É muito usado para representar cores (ex: `#FFFFFF` para branco) e endereços de memória.</p>
+                        <p><strong>Representação de Tipos de Dados:</strong><br>
+                        - <strong>Textos:</strong> Padrões como <strong>ASCII</strong> (American Standard Code for Information Interchange) usam 7 ou 8 bits para mapear números a letras, números e símbolos do inglês. O <strong>Unicode</strong> é um padrão mais moderno e abrangente, que usa até 32 bits por caractere (no padrão UTF-32) para representar quase todos os idiomas e emojis do mundo.<br>
+                        - <strong>Imagens:</strong> Imagens digitais são divididas em uma grade de pontos chamados <strong>pixels</strong>. Para imagens vetoriais, o computador armazena fórmulas matemáticas. Para imagens de bitmap (como JPG e PNG), ele armazena a cor de cada pixel. A cor é geralmente representada pelo sistema <strong>RGB (Red, Green, Blue)</strong>. Em um sistema de "True Color" de 24 bits, cada canal de cor (R, G, B) usa 8 bits, permitindo 256 níveis de intensidade para cada um. Isso resulta em 256 x 256 x 256 = 16,7 milhões de cores possíveis.<br>
+                        - <strong>Sons:</strong> O som analógico é uma onda contínua. Para digitalizá-lo, o processo de <strong>amostragem</strong> mede a amplitude (altura) da onda em intervalos regulares. A <strong>taxa de amostragem</strong> (medida em Hertz, Hz) define quantas vezes por segundo a onda é medida (ex: 44.100 Hz em CDs de áudio). A <strong>profundidade de bits (bit depth)</strong> define quantos bits são usados para representar cada amostra, determinando a precisão do som.</p>
+                        <div class="curiosidade">O caractere "A" maiúsculo, em ASCII, é representado pelo número 65. Em binário de 8 bits, isso se traduz para `01000001`. Já no padrão Unicode, o emoji "😂" é representado pelo ponto de código `U+1F602`, que em binário UTF-8 se torna `11110000 10011111 10011000 10000010`.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Quantos valores diferentes um único byte pode representar?</p>
-                            <select class="form-select" onchange="check(this,'256')"><option selected disabled></option><option>8</option><option>16</option><option>256</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Um byte (8 bits) pode representar 2^8 = 256 valores.</div><div class="quiz-feedback wrong">Incorreto. A resposta é 256 (2 elevado a 8).</div>
+                            <p>1. Um sistema de cor "True Color" de 24 bits é capaz de representar aproximadamente quantas cores diferentes?</p>
+                            <select class="form-select" onchange="check(this,'16,7 milhões')"><option selected disabled></option><option>256</option><option>65.536</option><option>16,7 milhões</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 São 256 (vermelho) x 256 (verde) x 256 (azul) possibilidades.</div><div class="quiz-feedback wrong">Incorreto. A resposta é 16,7 milhões.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Qual padrão é usado para representar caracteres da maioria dos idiomas do mundo?</p>
-                            <select class="form-select" onchange="check(this,'Unicode')"><option selected disabled></option><option>ASCII</option><option>Unicode</option><option>RGB</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Unicode é o padrão global.</div><div class="quiz-feedback wrong">Incorreto. ASCII é limitado, Unicode é o padrão moderno.</div>
+                            <p>2. Qual sistema numérico de base 16 é frequentemente usado para simplificar a leitura de longas sequências binárias, como em códigos de cores para web?</p>
+                            <select class="form-select" onchange="check(this,'Hexadecimal')"><option selected disabled></option><option>Decimal</option><option>Octal</option><option>Hexadecimal</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 O sistema hexadecimal agrupa 4 bits em um único caractere.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Hexadecimal.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. A cor de um pixel em uma imagem é comumente representada pelo sistema:</p>
-                            <select class="form-select" onchange="check(this,'RGB')"><option selected disabled></option><option>Ponto Flutuante</option><option>Binário</option><option>RGB</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ RGB (Red, Green, Blue) define as cores.</div><div class="quiz-feedback wrong">Incorreto. A resposta é RGB.</div>
+                            <p>3. No processo de digitalização de áudio, o que define o número de vezes por segundo que a amplitude da onda sonora é medida?</p>
+                            <select class="form-select" onchange="check(this,'Taxa de amostragem')"><option selected disabled></option><option>Profundidade de bits</option><option>Taxa de amostragem</option><option>Bitrate</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ A taxa de amostragem de um CD, por exemplo, é de 44.100 Hz.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a taxa de amostragem.</div>
                         </div>
                     </div>
                 </div>
@@ -127,26 +137,36 @@
                 <div class="tab-pane fade" id="tab3">
                     <div class="card-section">
                         <h2>3. Arquitetura de Computadores</h2>
-                        <p>A arquitetura de computadores descreve como os componentes de hardware são organizados e interagem para formar um sistema funcional. A base para quase todos os dispositivos modernos é a Arquitetura de von Neumann.</p>
-                        <p><strong>Unidade Central de Processamento (CPU)</strong> – O "cérebro" do computador, responsável por executar instruções. Contém a ULA e a Unidade de Controle.<br><strong>Unidade Lógica e Aritmética (ULA)</strong> – Realiza operações matemáticas (soma, subtração) e lógicas (E, OU, NÃO).<br><strong>Unidade de Controle (UC)</strong> – Busca instruções na memória, decodifica e coordena as outras partes do computador para executá-las.<br><strong>Memória Principal (RAM)</strong> – Armazena dados e instruções que estão sendo usados ativamente pela CPU. É volátil (perde dados ao desligar).<br><strong>Dispositivos de Entrada e Saída (E/S)</strong> – Permitem a interação com o usuário (teclado, mouse, monitor) e outros sistemas.</p>
-                        <div class="curiosidade">A Lei de Moore, observada por Gordon Moore em 1965, previa que o número de transistores em um chip dobraria aproximadamente a cada dois anos. Essa previsão impulsionou a indústria de semicondutores por mais de 50 anos.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/bfL3p_RkM5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>A arquitetura de computadores é a engenharia por trás do design dos componentes de hardware. A esmagadora maioria dos computadores modernos, de smartphones a supercomputadores, segue a <strong>Arquitetura de von Neumann</strong>, que se baseia em quatro componentes principais.</p>
+                        <p><strong>Componentes Principais:</strong><br>
+                        - <strong>Unidade Central de Processamento (CPU):</strong> O "cérebro" que executa as instruções. É composta por:<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Unidade Lógica e Aritmética (ULA):</strong> Realiza todas as operações matemáticas (soma, multiplicação) e lógicas (E, OU, NÃO, comparações).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Unidade de Controle (UC):</strong> O "maestro". Ela busca instruções na memória, as decodifica e envia sinais de controle para os outros componentes (ULA, memória, E/S) para que a instrução seja executada.<br>
+                        - <strong>Memória Principal (RAM):</strong> Armazena tanto as instruções de programas quanto os dados que estão sendo processados. É volátil, ou seja, seu conteúdo é perdido quando a energia é desligada.<br>
+                        - <strong>Dispositivos de Entrada e Saída (E/S):</strong> Permitem a comunicação do computador com o mundo exterior. Entrada (teclado, mouse, microfone) e Saída (monitor, impressora, alto-falantes).<br>
+                        - <strong>Barramentos (Buses):</strong> Vias de comunicação que interligam todos os componentes, permitindo a transferência de dados e sinais de controle entre eles.</p>
+                        <p><strong>Hierarquia de Memória:</strong><br>
+                        Para otimizar a velocidade, a memória é organizada em uma hierarquia. Quanto mais perto da CPU, mais rápida, menor e mais cara ela é.<br>
+                        1. <strong>Registradores:</strong> Dentro da própria CPU. Memória extremamente rápida para armazenar o dado ou instrução que está sendo processado no exato momento.<br>
+                        2. <strong>Memória Cache (L1, L2, L3):</strong> Uma memória pequena e muito rápida que serve como um "buffer" entre a CPU e a RAM. Armazena os dados e instruções mais frequentemente usados para evitar a lentidão de buscar na RAM.<br>
+                        3. <strong>Memória RAM:</strong> A memória de trabalho principal do sistema.<br>
+                        4. <strong>Armazenamento Secundário:</strong> Discos rígidos (HD) ou SSDs. Não são voláteis e armazenam o sistema operacional, aplicativos e arquivos permanentemente. São muito mais lentos que a RAM.</p>
+                        <div class="curiosidade">A distinção entre arquiteturas RISC (Reduced Instruction Set Computer) e CISC (Complex Instruction Set Computer) marcou a evolução das CPUs. Processadores CISC (como os da Intel) têm um conjunto grande de instruções complexas. Processadores RISC (como os da arquitetura ARM, presentes em quase todos os smartphones) usam um conjunto menor e mais simples de instruções, buscando maior eficiência energética.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual componente da CPU executa cálculos matemáticos?</p>
-                            <select class="form-select" onchange="check(this,'ULA')"><option selected disabled></option><option>Unidade de Controle</option><option>Registradores</option><option>ULA</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 A ULA é a calculadora do processador.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a ULA (Unidade Lógica e Aritmética).</div>
+                            <p>1. Qual componente da CPU é responsável por decodificar instruções e coordenar as ações de outras partes do hardware?</p>
+                            <select class="form-select" onchange="check(this,'Unidade de Controle (UC)')"><option selected disabled></option><option>Unidade Lógica e Aritmética (ULA)</option><option>Registradores</option><option>Unidade de Controle (UC)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 A UC atua como o maestro do computador.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a Unidade de Controle (UC).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. A memória RAM é considerada volátil porque:</p>
-                            <select class="form-select" onchange="check(this,'Perde os dados sem energia')"><option selected disabled></option><option>É muito rápida</option><option>Perde os dados sem energia</option><option>Armazena poucos dados</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Desligou, apagou. Por isso é volátil.</div><div class="quiz-feedback wrong">Incorreto. Volátil significa que requer energia para manter os dados.</div>
+                            <p>2. Na hierarquia de memória, qual tipo de memória fica entre a CPU e a RAM para acelerar o acesso aos dados mais usados?</p>
+                            <select class="form-select" onchange="check(this,'Memória Cache')"><option selected disabled></option><option>Registradores</option><option>Memória Cache</option><option>Armazenamento Secundário (SSD)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A Cache armazena cópias de dados da RAM para acesso ultrarrápido.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a Memória Cache.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Qual componente busca e decodifica as instruções de um programa?</p>
-                            <select class="form-select" onchange="check(this,'Unidade de Controle')"><option selected disabled></option><option>Memória RAM</option><option>Unidade de Controle</option><option>Disco Rígido</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ A Unidade de Controle é a maestrina da orquestra.</div><div class="quiz-feedback wrong">Incorreto. Essa é a função da Unidade de Controle.</div>
+                            <p>3. A arquitetura ARM, predominante em smartphones, é um exemplo de qual filosofia de design de processador?</p>
+                            <select class="form-select" onchange="check(this,'RISC')"><option selected disabled></option><option>CISC</option><option>RISC</option><option>Von Neumann</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ RISC (Reduced Instruction Set Computer) foca em um conjunto de instruções mais simples e eficientes.</div><div class="quiz-feedback wrong">Incorreto. A resposta é RISC.</div>
                         </div>
                     </div>
                 </div>
@@ -155,26 +175,30 @@
                 <div class="tab-pane fade" id="tab4">
                     <div class="card-section">
                         <h2>4. Sistemas Operacionais (SO)</h2>
-                        <p>O Sistema Operacional é o software mais importante de um computador. Ele atua como um intermediário entre o hardware (CPU, memória, disco) e os aplicativos (navegador, jogos), gerenciando todos os recursos de forma eficiente e segura.</p>
-                        <p><strong>Gerenciamento de Processos</strong> – Decide quais programas devem usar a CPU e por quanto tempo, permitindo a multitarefa.<br><strong>Gerenciamento de Memória</strong> – Aloca espaço na memória RAM para cada programa, garantindo que um não interfira no outro.<br><strong>Sistema de Arquivos</strong> – Organiza os dados em discos de armazenamento (HD, SSD) através de arquivos e pastas.<br><strong>Interface com o Usuário</strong> – Fornece uma maneira de interagirmos com o computador, seja por linha de comando (CLI) ou interface gráfica (GUI).<br><strong>Exemplos Famosos</strong> – Microsoft Windows, Apple macOS, Linux, Google Android e Apple iOS.</p>
-                        <div class="curiosidade">O Linux, criado por Linus Torvalds em 1991, começou como um projeto de hobby. Hoje, o kernel Linux é a base para o Android, a maioria dos servidores de internet e os supercomputadores mais rápidos do mundo.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1v0Vb4f-gqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>O Sistema Operacional é a camada de software fundamental que age como intermediário entre o hardware do computador e o usuário (ou os aplicativos). Sua principal função é gerenciar os recursos de hardware de forma eficiente e fornecer uma plataforma estável para a execução de outros softwares.</p>
+                        <p><strong>Componentes e Funções Essenciais:</strong><br>
+                        - <strong>Kernel:</strong> O núcleo do SO. É a parte que tem controle total sobre o sistema, gerenciando a CPU, a memória e os periféricos. Ele é a primeira parte do SO a ser carregada na memória durante a inicialização (boot).<br>
+                        - <strong>Gerenciamento de Processos:</strong> O SO gerencia a execução de múltiplos programas (processos). O <strong>escalonador (scheduler)</strong> é um componente do kernel que decide qual processo deve usar a CPU e por quanto tempo, criando a ilusão de multitarefa. Algoritmos como <strong>Round-Robin</strong> dão a cada processo uma pequena fatia de tempo da CPU.<br>
+                        - <strong>Gerenciamento de Memória:</strong> O SO aloca e desaloca porções da memória RAM para os processos, garantindo que um processo não invada o espaço de memória de outro. Ele também gerencia a <strong>memória virtual</strong>, uma técnica que usa parte do armazenamento secundário (SSD/HD) como uma extensão da RAM, permitindo que o sistema execute programas maiores do que a memória física disponível.<br>
+                        - <strong>Sistema de Arquivos:</strong> Abstrai o armazenamento físico (blocos em um disco) em uma estrutura lógica de arquivos e diretórios, facilitando a organização e o acesso aos dados.<br>
+                        - <strong>Drivers de Dispositivo:</strong> Softwares específicos que permitem ao SO se comunicar com cada peça de hardware (placa de vídeo, impressora, etc.).<br>
+                        - <strong>Shell (Interface com o Usuário):</strong> A camada que permite ao usuário interagir com o SO, seja através de uma <strong>Interface de Linha de Comando (CLI)</strong>, como o Terminal no Linux, ou uma <strong>Interface Gráfica do Usuário (GUI)</strong>, como o Windows.</p>
+                        <div class="curiosidade">O conceito de "dual-boot" permite que você instale dois ou mais sistemas operacionais no mesmo computador. Durante a inicialização, um programa chamado "boot loader" (como o GRUB no Linux) permite que você escolha qual SO deseja carregar, oferecendo flexibilidade para usar, por exemplo, Windows para jogos e Linux para desenvolvimento.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual é a principal função de um Sistema Operacional?</p>
-                            <select class="form-select" onchange="check(this,'Gerenciar recursos de hardware e software')"><option selected disabled></option><option>Navegar na internet</option><option>Gerenciar recursos de hardware e software</option><option>Criar documentos</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 O SO é o grande gerente do computador.</div><div class="quiz-feedback wrong">Incorreto. A principal função é gerenciar todos os recursos.</div>
+                            <p>1. Qual é o nome do núcleo central de um sistema operacional, responsável pelo gerenciamento de hardware e processos?</p>
+                            <select class="form-select" onchange="check(this,'Kernel')"><option selected disabled></option><option>Shell</option><option>Kernel</option><option>Driver</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O Kernel é o coração do sistema operacional.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Kernel.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. A capacidade de executar vários programas "ao mesmo tempo" é chamada de:</p>
-                            <select class="form-select" onchange="check(this,'Multitarefa')"><option selected disabled></option><option>Monotarefa</option><option>Multitarefa</option><option>Multi-usuário</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Isso é possível graças ao gerenciamento de processos do SO.</div><div class="quiz-feedback wrong">Incorreto. O nome disso é multitarefa.</div>
+                            <p>2. A técnica que usa o disco rígido ou SSD para simular mais memória RAM do que a fisicamente disponível é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Memória Virtual')"><option selected disabled></option><option>Memória Cache</option><option>Multitarefa</option><option>Memória Virtual</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A memória virtual é crucial para sistemas modernos.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Memória Virtual.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Qual destes é um sistema operacional de código aberto?</p>
-                            <select class="form-select" onchange="check(this,'Linux')"><option selected disabled></option><option>Windows</option><option>macOS</option><option>Linux</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Linux é o exemplo mais famoso de software livre e de código aberto.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Linux.</div>
+                            <p>3. Qual componente do SO decide qual processo deve ser executado pela CPU em um determinado momento?</p>
+                            <select class="form-select" onchange="check(this,'Escalonador (Scheduler)')"><option selected disabled></option><option>Sistema de Arquivos</option><option>Escalonador (Scheduler)</option><option>Shell</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ O escalonador é o responsável por gerenciar a multitarefa.</div><div class="quiz-feedback wrong">Incorreto. A resposta é o Escalonador (Scheduler).</div>
                         </div>
                     </div>
                 </div>
@@ -183,26 +207,36 @@
                 <div class="tab-pane fade" id="tab5">
                     <div class="card-section">
                         <h2>5. Algoritmos e Estruturas de Dados</h2>
-                        <p>Um algoritmo é uma receita: uma sequência de passos finita e bem definida para resolver um problema. As estruturas de dados são as formas de organizar e armazenar dados para que possam ser usados eficientemente por esses algoritmos. Juntos, eles são o coração da programação.</p>
-                        <p><strong>Características de um Algoritmo</strong> – Deve ser finito (ter um fim), preciso (sem ambiguidades) e eficaz (capaz de resolver o problema).<br><strong>Estruturas de Dados Lineares</strong> – Dados organizados em sequência, como <strong>Arrays</strong> (listas), <strong>Pilhas</strong> (último a entrar, primeiro a sair - LIFO) e <strong>Filas</strong> (primeiro a entrar, primeiro a sair - FIFO).<br><strong>Estruturas de Dados Não-Lineares</strong> – Organização mais complexa, como <strong>Árvores</strong> (para dados hierárquicos) e <strong>Grafos</strong> (para representar conexões, como redes sociais).<br><strong>Complexidade (Big O)</strong> – Notação usada para medir a eficiência de um algoritmo, analisando como o tempo de execução ou o uso de memória cresce com o aumento da entrada de dados.</p>
-                        <div class="curiosidade">O nome "algoritmo" é uma homenagem ao matemático persa do século IX, Muhammad ibn Musa al-Khwarizmi. A latinização de seu nome, "Algoritmi", deu origem ao termo.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/z-gfq-h9gZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>No coração da ciência da computação estão os algoritmos e as estruturas de dados. Um <strong>algoritmo</strong> é uma sequência finita e bem definida de passos para resolver um problema. Uma <strong>estrutura de dados</strong> é uma forma particular de organizar e armazenar dados em um computador para que possam ser usados de forma eficiente.</p>
+                        <p><strong>Análise de Complexidade (Notação Big O):</strong><br>
+                        Para comparar a eficiência de algoritmos, usamos a Notação Big O, que descreve como o tempo de execução ou o uso de memória de um algoritmo cresce conforme o tamanho da entrada (N) aumenta.<br>
+                        - <strong>O(1) - Constante:</strong> O tempo é o mesmo, não importa o tamanho da entrada. Ex: Acessar um elemento de um array pelo seu índice.<br>
+                        - <strong>O(log n) - Logarítmico:</strong> O tempo cresce muito lentamente. Ex: Busca binária em uma lista ordenada.<br>
+                        - <strong>O(n) - Linear:</strong> O tempo cresce proporcionalmente ao tamanho da entrada. Ex: Percorrer todos os elementos de uma lista.<br>
+                        - <strong>O(n²) - Quadrático:</strong> O tempo cresce exponencialmente. Geralmente envolve laços aninhados. Ex: O algoritmo de ordenação Bubble Sort.</p>
+                        <p><strong>Estruturas de Dados Comuns:</strong><br>
+                        - <strong>Array (Vetor):</strong> Uma coleção de elementos acessados por um índice numérico. Ótimo para acesso rápido (O(1)), mas lento para inserção e remoção no meio da estrutura.<br>
+                        - <strong>Linked List (Lista Ligada):</strong> Uma sequência de nós onde cada nó aponta para o próximo. Rápida para inserções e remoções, mas lenta para acesso a um elemento específico (O(n)).<br>
+                        - <strong>Pilha (Stack):</strong> Segue o princípio LIFO (Last-In, First-Out - o último a entrar é o primeiro a sair). Pense em uma pilha de pratos.<br>
+                        - <strong>Fila (Queue):</strong> Segue o princípio FIFO (First-In, First-Out - o primeiro a entrar é o primeiro a sair). Pense em uma fila de banco.<br>
+                        - <strong>Árvore Binária de Busca:</strong> Uma estrutura de nós onde cada nó tem no máximo dois filhos. Para qualquer nó, todos os valores na sub-árvore esquerda são menores, e todos na direita são maiores. Permite buscas, inserções e deleções eficientes (em média O(log n)).<br>
+                        - <strong>Grafo:</strong> Um conjunto de nós (vértices) conectados por arestas. Usado para modelar redes, como redes sociais (pessoas são vértices, amizades são arestas) ou mapas (cidades são vértices, estradas são arestas).</p>
+                        <div class="curiosidade">O algoritmo de busca do Google, o PageRank (nomeado em homenagem a Larry Page), foi inovador por tratar a web como um imenso grafo. Ele determinava a importância de uma página com base no número e na qualidade das outras páginas que apontavam para ela, uma ideia inspirada em como artigos científicos são citados no meio acadêmico.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Uma sequência finita de passos para resolver um problema é chamada de:</p>
-                            <select class="form-select" onchange="check(this,'Algoritmo')"><option selected disabled></option><option>Programa</option><option>Algoritmo</option><option>Estrutura de Dados</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Essa é a definição clássica de algoritmo.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Algoritmo.</div>
+                            <p>1. Qual notação Big O descreve um algoritmo cujo tempo de execução cresce proporcionalmente ao tamanho da entrada de dados?</p>
+                            <select class="form-select" onchange="check(this,'O(n)')"><option selected disabled></option><option>O(1)</option><option>O(n)</option><option>O(n²)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O(n) representa a complexidade linear.</div><div class="quiz-feedback wrong">Incorreto. A resposta é O(n).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Qual estrutura de dados segue o princípio "o primeiro a entrar é o primeiro a sair" (FIFO)?</p>
-                            <select class="form-select" onchange="check(this,'Fila')"><option selected disabled></option><option>Pilha</option><option>Árvore</option><option>Fila</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Assim como uma fila de banco.</div><div class="quiz-feedback wrong">Incorreto. Essa é a característica de uma Fila.</div>
+                            <p>2. Uma estrutura de dados usada para modelar conexões em uma rede social, onde os nós são pessoas e as arestas são amizades, é um(a):</p>
+                            <select class="form-select" onchange="check(this,'Grafo')"><option selected disabled></option><option>Árvore</option><option>Pilha</option><option>Grafo</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Grafos são perfeitos para representar redes e conexões.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Grafo.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. A notação Big O é usada para medir a:</p>
-                            <select class="form-select" onchange="check(this,'Eficiência de um algoritmo')"><option selected disabled></option><option>Eficiência de um algoritmo</option><option>Correção de um algoritmo</option><option>Facilidade de leitura do código</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Ela nos ajuda a comparar quão "rápidos" são os algoritmos.</div><div class="quiz-feedback wrong">Incorreto. Big O mede a complexidade e eficiência.</div>
+                            <p>3. Qual estrutura de dados opera no princípio LIFO (Last-In, First-Out)?</p>
+                            <select class="form-select" onchange="check(this,'Pilha (Stack)')"><option selected disabled></option><option>Fila (Queue)</option><option>Pilha (Stack)</option><option>Array</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Como uma pilha de pratos, o último que você coloca é o primeiro que você tira.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Pilha (Stack).</div>
                         </div>
                     </div>
                 </div>
@@ -211,26 +245,36 @@
                 <div class="tab-pane fade" id="tab6">
                     <div class="card-section">
                         <h2>6. Linguagens de Programação</h2>
-                        <p>Linguagens de programação são as ferramentas que usamos para escrever algoritmos de uma forma que os computadores possam entender e executar. Elas variam em nível de abstração, paradigmas e forma de execução.</p>
-                        <p><strong>Linguagens de Baixo Nível</strong> – Mais próximas do hardware, como <strong>Assembly</strong>. São rápidas mas difíceis de programar.<br><strong>Linguagens de Alto Nível</strong> – Mais próximas da linguagem humana, como <strong>Python, Java, C#, JavaScript</strong>. São mais fáceis e produtivas.<br><strong>Compilação vs. Interpretação</strong> – Linguagens <strong>compiladas</strong> (C++, Go) são traduzidas para código de máquina de uma vez só, gerando um executável. Linguagens <strong>interpretadas</strong> (Python, JavaScript) são traduzidas linha por linha durante a execução.<br><strong>Paradigmas de Programação</strong> – São estilos de programação. Os principais incluem <strong>Imperativo</strong> (diz como fazer), <strong>Orientado a Objetos</strong> (organiza o código em objetos) e <strong>Funcional</strong> (trata a computação como avaliação de funções matemáticas).</p>
-                        <div class="curiosidade">A primeira linguagem de programação de alto nível foi a Fortran (FORmula TRANslation), desenvolvida na década de 1950 por uma equipe da IBM liderada por John Backus. Ela ainda é usada em computação científica e supercomputadores.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/EbZ_GG122dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Linguagens de programação são sistemas formais de comunicação com um computador. Elas fornecem um conjunto de regras (sintaxe) e significados (semântica) para escrever instruções que podem ser executadas para realizar uma tarefa específica.</p>
+                        <p><strong>Níveis de Abstração:</strong><br>
+                        - <strong>Baixo Nível:</strong> Linguagens mais próximas do hardware, oferecendo pouco ou nenhum encapsulamento das instruções do processador. <strong>Assembly</strong> é o principal exemplo, onde cada comando corresponde diretamente a uma instrução da CPU. É extremamente rápida, mas muito difícil de programar e não é portável.<br>
+                        - <strong>Alto Nível:</strong> Linguagens mais próximas da linguagem humana, com forte abstração. Exemplos como <strong>Python, Java e C#</strong> permitem que o programador se concentre na lógica do problema, sem se preocupar com detalhes do hardware como gerenciamento de memória.</p>
+                        <p><strong>Execução: Compilada vs. Interpretada:</strong><br>
+                        - <strong>Compilada:</strong> O código-fonte é traduzido de uma só vez por um programa chamado <strong>compilador</strong> para um código de máquina nativo, gerando um arquivo executável (ex: `.exe` no Windows). A execução é muito rápida. Ex: C, C++, Go, Rust.<br>
+                        - <strong>Interpretada:</strong> O código-fonte é lido e executado linha por linha por um programa chamado <strong>interpretador</strong>. Não há um passo de compilação prévio, o que torna o desenvolvimento mais ágil, mas a execução geralmente é mais lenta. Ex: Python, JavaScript, Ruby.</p>
+                        <p><strong>Paradigmas de Programação:</strong><br>
+                        - <strong>Imperativo:</strong> Descreve a computação como uma sequência de comandos que mudam o estado do programa. (Ex: C, Fortran).<br>
+                        - <strong>Orientado a Objetos (OO):</strong> Organiza o código em "objetos", que encapsulam dados (atributos) e comportamentos (métodos). Fomenta a reutilização de código através de herança e polimorfismo. (Ex: Java, C++, Python).<br>
+                        - <strong>Funcional:</strong> Trata a computação como a avaliação de funções matemáticas e evita a mudança de estado e dados mutáveis. (Ex: Haskell, Lisp, e funcionalidades em Python e JavaScript).</p>
+                        <p><strong>Tipagem: Estática vs. Dinâmica:</strong><br>
+                        - <strong>Tipagem Estática:</strong> A verificação do tipo de uma variável é feita em tempo de compilação. O programador deve declarar o tipo (ex: `int numero = 10;` em Java). Ajuda a pegar erros mais cedo. (Ex: Java, C++, Go).<br>
+                        - <strong>Tipagem Dinâmica:</strong> A verificação do tipo é feita em tempo de execução. O tipo de uma variável pode mudar. (ex: `numero = 10` e depois `numero = "dez"` em Python). Oferece mais flexibilidade. (Ex: Python, JavaScript, Ruby).</p>
+                        <div class="curiosidade">Grace Hopper, uma pioneira da computação, desenvolveu o primeiro compilador em 1952. Sua crença de que as linguagens de programação deveriam ser mais próximas do inglês levou à criação do COBOL, uma das primeiras linguagens de alto nível, que, incrivelmente, ainda é usada em sistemas legados de bancos e governos até hoje.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual destas é considerada uma linguagem de baixo nível?</p>
-                            <select class="form-select" onchange="check(this,'Assembly')"><option selected disabled></option><option>Python</option><option>Assembly</option><option>Java</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Assembly está muito próxima da linguagem de máquina.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Assembly.</div>
+                            <p>1. Uma linguagem onde o tipo de uma variável é verificado durante a execução do programa é classificada como tendo:</p>
+                            <select class="form-select" onchange="check(this,'Tipagem Dinâmica')"><option selected disabled></option><option>Tipagem Forte</option><option>Tipagem Estática</option><option>Tipagem Dinâmica</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Python e JavaScript são exemplos de linguagens com tipagem dinâmica.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Tipagem Dinâmica.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Uma linguagem que é traduzida linha por linha durante a execução é chamada de:</p>
-                            <select class="form-select" onchange="check(this,'Interpretada')"><option selected disabled></option><option>Compilada</option><option>Interpretada</option><option>Montada</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Python e JavaScript são exemplos famosos.</div><div class="quiz-feedback wrong">Incorreto. Isso descreve uma linguagem Interpretada.</div>
-                        </div>
-                        <div class="quiz-question">
-                            <p>3. O paradigma que organiza o código em torno de "objetos" que contêm dados e métodos é:</p>
+                            <p>2. Qual paradigma de programação organiza o código em torno de entidades que encapsulam dados e comportamentos?</p>
                             <select class="form-select" onchange="check(this,'Orientado a Objetos')"><option selected disabled></option><option>Funcional</option><option>Imperativo</option><option>Orientado a Objetos</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Java, C++ e Python são linguagens com forte suporte a este paradigma.</div><div class="quiz-feedback wrong">Incorreto. É a Programação Orientada a Objetos (POO).</div>
+                            <div class="quiz-feedback correct">Correto! 🚀 A Programação Orientada a Objetos é um dos paradigmas mais populares.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Orientado a Objetos.</div>
+                        </div>
+                        <div class="quiz-question">
+                            <p>3. C++ e Go são exemplos de linguagens que são traduzidas de uma vez para código de máquina. Elas são:</p>
+                            <select class="form-select" onchange="check(this,'Compiladas')"><option selected disabled></option><option>Interpretadas</option><option>Compiladas</option><option>Híbridas</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ O processo de compilação gera um executável nativo, resultando em alta performance.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Compiladas.</div>
                         </div>
                     </div>
                 </div>
@@ -239,26 +283,35 @@
                 <div class="tab-pane fade" id="tab7">
                     <div class="card-section">
                         <h2>7. Redes de Computadores</h2>
-                        <p>Redes de computadores são conjuntos de dispositivos interconectados que trocam dados e compartilham recursos. A internet é o maior exemplo de uma rede, conectando bilhões de dispositivos em todo o mundo. A comunicação é regida por um conjunto de regras chamado protocolo.</p>
-                        <p><strong>Tipos de Rede</strong> – <strong>LAN</strong> (Local Area Network) para pequenas áreas como uma casa ou escritório, e <strong>WAN</strong> (Wide Area Network) para grandes áreas geográficas, como a internet.<br><strong>Endereço IP</strong> – Um número único que identifica um dispositivo em uma rede, como um endereço para correspondência.<br><strong>Protocolos</strong> – Conjuntos de regras. Os mais importantes são: <strong>IP</strong> (endereçamento), <strong>TCP</strong> (garante a entrega ordenada dos pacotes) e <strong>HTTP</strong> (usado para navegar na web).<br><strong>DNS (Domain Name System)</strong> – O "tradutor" da internet. Converte nomes de domínio amigáveis (ex: www.google.com) em endereços IP que os computadores entendem.</p>
-                        <div class="curiosidade">A primeira mensagem enviada pela ARPANET (precursora da internet) em 1969 foi "LO". O programador Charley Kline estava tentando digitar "LOGIN", mas o sistema travou após as duas primeiras letras.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/402-86tjM-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Redes de computadores permitem que dispositivos (nós) troquem dados entre si. A Internet é o exemplo mais vasto, conectando bilhões de dispositivos globalmente. A comunicação em rede é padronizada por modelos de camadas e protocolos.</p>
+                        <p><strong>Modelos de Camadas:</strong><br>
+                        Para organizar a complexidade da comunicação, foram criados modelos de camadas, onde cada camada é responsável por uma parte do processo e se comunica apenas com a camada imediatamente acima ou abaixo.<br>
+                        - <strong>Modelo OSI (Open Systems Interconnection):</strong> Um modelo conceitual de 7 camadas (Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação). É mais um guia teórico.<br>
+                        - <strong>Modelo TCP/IP:</strong> O modelo prático usado na Internet, com 4 camadas (Enlace/Link, Rede/Internet, Transporte, Aplicação). A camada de Aplicação do TCP/IP engloba as camadas de Sessão, Apresentação e Aplicação do modelo OSI.</p>
+                        <p><strong>Protocolos e Componentes Chave:</strong><br>
+                        - <strong>Endereço IP (Internet Protocol):</strong> A camada de Rede usa o IP para endereçar e rotear pacotes de dados. Cada dispositivo em uma rede tem um endereço IP único (ex: `192.168.1.10`).<br>
+                        - <strong>Pacotes:</strong> Os dados são quebrados em pequenos pedaços chamados pacotes. Cada pacote contém uma parte dos dados, o endereço IP de origem e o de destino, e outras informações de controle.<br>
+                        - <strong>TCP (Transmission Control Protocol):</strong> Opera na camada de Transporte. É um protocolo confiável que garante que todos os pacotes cheguem ao destino, na ordem correta e sem erros. Ele estabelece uma conexão antes de enviar os dados (como um telefonema).<br>
+                        - <strong>UDP (User Datagram Protocol):</strong> Também na camada de Transporte, mas é um protocolo não confiável e mais rápido. Ele simplesmente envia os pacotes sem garantir a entrega. Usado para streaming de vídeo e jogos online, onde a velocidade é mais importante que a perda ocasional de um pacote.<br>
+                        - <strong>HTTP (HyperText Transfer Protocol):</strong> Na camada de Aplicação, é o protocolo usado para a World Wide Web.<br>
+                        - <strong>DNS (Domain Name System):</strong> O "tradutor" da Internet. Ele converte nomes de domínio legíveis por humanos (como `www.google.com`) em endereços IP que as máquinas entendem.<br>
+                        - <strong>Roteadores e Switches:</strong> Roteadores operam na camada de Rede para conectar redes diferentes e encaminhar pacotes entre elas. Switches operam na camada de Enlace para conectar dispositivos dentro da mesma rede local (LAN).</p>
+                        <div class="curiosidade">O seu navegador usa vários protocolos ao mesmo tempo. Ao acessar um site, ele primeiro usa o DNS para encontrar o endereço IP. Em seguida, usa TCP para estabelecer uma conexão confiável com o servidor. Por fim, usa HTTP (ou HTTPS, a versão segura) para solicitar e receber o conteúdo da página web.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual protocolo é a base para a navegação na World Wide Web?</p>
-                            <select class="form-select" onchange="check(this,'HTTP')"><option selected disabled></option><option>FTP</option><option>HTTP</option><option>TCP</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 HTTP (HyperText Transfer Protocol) é a resposta.</div><div class="quiz-feedback wrong">Incorreto. A resposta é HTTP.</div>
+                            <p>1. Qual protocolo da camada de Transporte é mais rápido e ideal para streaming de vídeo, pois não garante a entrega de todos os pacotes?</p>
+                            <select class="form-select" onchange="check(this,'UDP')"><option selected disabled></option><option>TCP</option><option>IP</option><option>UDP</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 UDP é usado quando a velocidade é mais crítica que a confiabilidade.</div><div class="quiz-feedback wrong">Incorreto. A resposta é UDP (User Datagram Protocol).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. O que o DNS faz?</p>
-                            <select class="form-select" onchange="check(this,'Traduz nomes de domínio em endereços IP')"><option selected disabled></option><option>Garante a entrega de pacotes</option><option>Traduz nomes de domínio em endereços IP</option><option>Criptografa a comunicação</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Sem o DNS, teríamos que decorar números para acessar sites.</div><div class="quiz-feedback wrong">Incorreto. DNS é o sistema de nomes de domínio.</div>
+                            <p>2. Em qual camada do modelo TCP/IP o protocolo IP opera, sendo responsável pelo endereçamento e roteamento de pacotes?</p>
+                            <select class="form-select" onchange="check(this,'Rede (Internet)')"><option selected disabled></option><option>Aplicação</option><option>Transporte</option><option>Rede (Internet)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A camada de Rede é onde os pacotes encontram seu caminho pela internet.</div><div class="quiz-feedback wrong">Incorreto. A resposta é a camada de Rede (ou Internet).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Uma rede dentro de um único edifício é geralmente uma:</p>
-                            <select class="form-select" onchange="check(this,'LAN')"><option selected disabled></option><option>WAN</option><option>MAN</option><option>LAN</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ LAN significa Local Area Network (Rede de Área Local).</div><div class="quiz-feedback wrong">Incorreto. A resposta é LAN.</div>
+                            <p>3. Qual equipamento é usado para conectar diferentes redes e encaminhar pacotes entre elas, como da sua casa para a internet?</p>
+                            <select class="form-select" onchange="check(this,'Roteador')"><option selected disabled></option><option>Switch</option><option>Roteador</option><option>Modem</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ O roteador é o "controlador de tráfego" entre redes.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Roteador.</div>
                         </div>
                     </div>
                 </div>
@@ -267,26 +320,36 @@
                 <div class="tab-pane fade" id="tab8">
                     <div class="card-section">
                         <h2>8. Bancos de Dados</h2>
-                        <p>Bancos de dados são coleções organizadas de informações, projetadas para serem facilmente acessadas, gerenciadas e atualizadas. Eles são a espinha dorsal de quase todos os aplicativos, desde redes sociais até sistemas bancários.</p>
-                        <p><strong>Bancos de Dados Relacionais (SQL)</strong> – Organizam os dados em tabelas com linhas e colunas, com relações bem definidas entre elas (ex: MySQL, PostgreSQL). A linguagem padrão para consultá-los é a <strong>SQL</strong> (Structured Query Language).<br><strong>Bancos de Dados Não-Relacionais (NoSQL)</strong> – Oferecem modelos mais flexíveis, como documentos (MongoDB), chave-valor (Redis) ou grafos (Neo4j). São ótimos para dados não estruturados e grande escala.<br><strong>CRUD</strong> – Acrônimo para as quatro operações básicas em um banco de dados: <strong>C</strong>reate (Criar), <strong>R</strong>ead (Ler), <strong>U</strong>pdate (Atualizar) e <strong>D</strong>elete (Excluir).<br><strong>Chaves</strong> – Em bancos SQL, a <strong>Chave Primária</strong> identifica unicamente cada registro em uma tabela, enquanto a <strong>Chave Estrangeira</strong> cria um link para uma chave primária em outra tabela.</p>
-                        <div class="curiosidade">A linguagem SQL foi desenvolvida na IBM no início dos anos 70, baseada no modelo relacional de Edgar F. Codd. Seu nome original era SEQUEL (Structured English Query Language), mas teve que ser encurtado para SQL por questões de marca registrada.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/a_dMgduss4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Bancos de dados são sistemas projetados para armazenar, gerenciar e recuperar grandes volumes de dados de forma estruturada e eficiente. Eles são essenciais para a maioria das aplicações modernas.</p>
+                        <p><strong>Bancos de Dados Relacionais (SQL):</strong><br>
+                        Dominantes por décadas, organizam os dados em tabelas (relações) compostas por linhas (registros) e colunas (atributos). A relação entre as tabelas é mantida por meio de chaves.<br>
+                        - <strong>Linguagem:</strong> SQL (Structured Query Language) é a linguagem padrão para definir, manipular e consultar dados.<br>
+                        - <strong>Propriedades ACID:</strong> As transações em bancos SQL seguem as propriedades ACID: <strong>A</strong>tomicidade (a transação ocorre por completo ou não ocorre), <strong>C</strong>onsistência (os dados permanecem válidos), <strong>I</strong>solamento (transações concorrentes não interferem umas nas outras) e <strong>D</strong>urabilidade (uma vez confirmada, a transação é permanente).<br>
+                        - <strong>Exemplos:</strong> MySQL, PostgreSQL, Oracle, SQL Server.</p>
+                        <p><strong>Bancos de Dados Não-Relacionais (NoSQL):</strong><br>
+                        Surgiram para lidar com as limitações dos bancos SQL em cenários de grande volume, variedade e velocidade de dados (Big Data). Eles não usam o modelo de tabelas e geralmente são mais flexíveis e escaláveis horizontalmente.<br>
+                        - <strong>Modelos Comuns:</strong><br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Documentos:</strong> Armazena dados em documentos semi-estruturados, como JSON. (Ex: MongoDB, CouchDB).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Chave-Valor:</strong> O modelo mais simples, associa uma chave única a um valor. (Ex: Redis, DynamoDB).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Colunares:</strong> Otimizados para leituras e agregações rápidas sobre grandes volumes de dados. (Ex: Cassandra, HBase).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Grafos:</strong> Projetados para armazenar dados sobre relacionamentos complexos. (Ex: Neo4j, Amazon Neptune).<br>
+                        - <strong>Propriedades BASE:</strong> Em contraste com ACID, muitos bancos NoSQL seguem o princípio BASE: <strong>B</strong>asically <strong>A</strong>vailable (o sistema está basicamente sempre disponível), <strong>S</strong>oft state (o estado pode mudar ao longo do tempo), e <strong>E</strong>ventual consistency (os dados se tornarão consistentes eventualmente).</p>
+                        <div class="curiosidade">Redis é um banco de dados chave-valor extremamente rápido porque armazena todos os seus dados na memória RAM, em vez de em disco. Por isso, é frequentemente usado como um cache para acelerar aplicações, armazenando resultados de consultas frequentes e evitando que o banco de dados principal seja sobrecarregado.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual linguagem é padrão para interagir com bancos de dados relacionais?</p>
-                            <select class="form-select" onchange="check(this,'SQL')"><option selected disabled></option><option>Python</option><option>HTML</option><option>SQL</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 SQL é a linguagem universal dos bancos relacionais.</div><div class="quiz-feedback wrong">Incorreto. A resposta é SQL.</div>
+                            <p>1. As propriedades Atomicidade, Consistência, Isolamento e Durabilidade (ACID) são características de qual tipo de banco de dados?</p>
+                            <select class="form-select" onchange="check(this,'Relacional (SQL)')"><option selected disabled></option><option>Relacional (SQL)</option><option>Documentos (NoSQL)</option><option>Grafos (NoSQL)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 ACID garante a confiabilidade das transações em bancos de dados SQL.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Relacional (SQL).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Qual tipo de banco de dados é mais flexível e não usa tabelas, como o MongoDB?</p>
-                            <select class="form-select" onchange="check(this,'NoSQL')"><option selected disabled></option><option>Relacional</option><option>NoSQL</option><option>Hierárquico</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 NoSQL é a categoria para esses bancos de dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é NoSQL.</div>
+                            <p>2. Qual modelo de banco de dados NoSQL é ideal para representar relacionamentos complexos, como os de uma rede social?</p>
+                            <select class="form-select" onchange="check(this,'Grafos')"><option selected disabled></option><option>Chave-Valor</option><option>Documentos</option><option>Grafos</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Bancos de dados de grafos, como o Neo4j, são especializados nisso.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Grafos.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. As operações Criar, Ler, Atualizar e Excluir são conhecidas pelo acrônimo:</p>
-                            <select class="form-select" onchange="check(this,'CRUD')"><option selected disabled></option><option>CRUD</option><option>ACID</option><option>BASE</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ CRUD representa as operações fundamentais de dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é CRUD.</div>
+                            <p>3. MongoDB é um exemplo popular de qual tipo de banco de dados NoSQL?</p>
+                            <select class="form-select" onchange="check(this,'Documentos')"><option selected disabled></option><option>Documentos</option><option>Colunares</option><option>Chave-Valor</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Ele armazena dados em um formato flexível semelhante a JSON.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Documentos.</div>
                         </div>
                     </div>
                 </div>
@@ -295,26 +358,31 @@
                 <div class="tab-pane fade" id="tab9">
                     <div class="card-section">
                         <h2>9. Engenharia de Software</h2>
-                        <p>Engenharia de Software é a disciplina que aplica princípios de engenharia para construir e manter sistemas de software de alta qualidade. Ela vai além da programação, abrangendo todo o ciclo de vida de um produto, desde a ideia inicial até a sua descontinuação.</p>
-                        <p><strong>Ciclo de Vida do Software</strong> – Inclui as fases de <strong>Requisitos</strong> (o que o sistema deve fazer), <strong>Projeto</strong> (como o sistema será construído), <strong>Implementação</strong> (codificação), <strong>Testes</strong> (verificação de qualidade) e <strong>Manutenção</strong> (correções e melhorias).<br><strong>Metodologias de Desenvolvimento</strong>:<br>  - <strong>Cascata (Waterfall)</strong>: Um modelo sequencial e rígido, onde cada fase deve ser concluída antes de iniciar a próxima.<br>  - <strong>Ágil (Agile)</strong>: Uma abordagem iterativa e flexível que foca em entregas rápidas e colaboração. Métodos populares incluem <strong>Scrum</strong> (com ciclos chamados Sprints) e <strong>Kanban</strong> (focado em fluxo contínuo).<br><strong>Controle de Versão</strong> – Ferramentas como o <strong>Git</strong> são essenciais para gerenciar mudanças no código, permitindo que equipes trabalhem em paralelo sem conflitos.</p>
-                        <div class="curiosidade">O termo "bug" (inseto) para descrever uma falha em um sistema se popularizou em 1947, quando engenheiros da Universidade de Harvard encontraram uma mariposa real presa em um relé do computador Mark II, causando um mau funcionamento. Eles a removeram e a colaram no diário de bordo com a anotação: "Primeiro caso real de um bug sendo encontrado".</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/y4p7JAAp-yE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Engenharia de Software é a aplicação de uma abordagem sistemática, disciplinada e quantificável para o desenvolvimento, operação e manutenção de software. É a disciplina que transforma a programação, uma arte, em um processo de engenharia previsível e de alta qualidade.</p>
+                        <p><strong>Metodologias de Desenvolvimento:</strong><br>
+                        - <strong>Cascata (Waterfall):</strong> Um modelo sequencial onde cada fase (Requisitos, Projeto, Implementação, Teste, Implantação) deve ser concluída antes que a próxima comece. É rígido e pouco adaptável a mudanças, sendo inadequado para a maioria dos projetos modernos.<br>
+                        - <strong>Ágil (Agile):</strong> Uma mentalidade que valoriza a colaboração, a entrega de valor em ciclos curtos e a adaptação a mudanças. Não é um método, mas um conjunto de princípios. Os métodos ágeis mais populares são:<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Scrum:</strong> Um framework que organiza o trabalho em ciclos chamados <strong>Sprints</strong> (geralmente de 1 a 4 semanas). Possui papéis definidos: <strong>Product Owner</strong> (define o que será construído), <strong>Scrum Master</strong> (garante que o processo seja seguido) e <strong>Time de Desenvolvimento</strong> (constrói o produto).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Kanban:</strong> Focado na visualização do fluxo de trabalho e na limitação do trabalho em progresso (Work in Progress - WIP). É um sistema de melhoria contínua, sem Sprints de tempo fixo.</p>
+                        <p><strong>Ferramentas e Práticas Essenciais:</strong><br>
+                        - <strong>Controle de Versão com Git:</strong> O Git é um sistema de controle de versão distribuído que permite que múltiplos desenvolvedores trabalhem no mesmo código-fonte de forma segura. Ele rastreia cada mudança, permitindo reverter para versões anteriores e fundir (merge) o trabalho de diferentes pessoas.<br>
+                        - <strong>CI/CD (Integração Contínua / Entrega Contínua):</strong> Uma prática de automação. Com a <strong>Integração Contínua (CI)</strong>, o código de vários desenvolvedores é integrado e testado automaticamente sempre que uma nova alteração é enviada. Com a <strong>Entrega Contínua (CD)</strong>, se todos os testes passarem, a nova versão do software é automaticamente preparada para ser implantada em produção.</p>
+                        <div class="curiosidade">O termo "patch", usado para descrever uma pequena correção de software, tem uma origem literal. Nos primórdios da computação, os programas eram armazenados em fitas de papel perfuradas. Para corrigir um erro, os programadores literalmente colavam um pequeno pedaço ("patch") de fita sobre os furos errados e perfuravam os corretos.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual metodologia de desenvolvimento de software é conhecida por ser sequencial e rígida?</p>
-                            <select class="form-select" onchange="check(this,'Cascata')"><option selected disabled></option><option>Ágil</option><option>Scrum</option><option>Cascata</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Cascata é o modelo tradicional e linear.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Cascata (Waterfall).</div>
+                            <p>1. No framework Scrum, qual papel é responsável por definir as funcionalidades do produto e priorizar o que deve ser construído?</p>
+                            <select class="form-select" onchange="check(this,'Product Owner')"><option selected disabled></option><option>Scrum Master</option><option>Product Owner</option><option>Time de Desenvolvimento</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O Product Owner é a voz do cliente e do negócio.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Product Owner.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Na metodologia Scrum, o trabalho é dividido em ciclos curtos e iterativos chamados:</p>
-                            <select class="form-select" onchange="check(this,'Sprints')"><option selected disabled></option><option>Releases</option><option>Sprints</option><option>Maratonas</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Sprints geralmente duram de 1 a 4 semanas.</div><div class="quiz-feedback wrong">Incorreto. São chamados de Sprints.</div>
+                            <p>2. A prática de automaticamente integrar e testar o código de múltiplos desenvolvedores em um repositório central é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Integração Contínua (CI)')"><option selected disabled></option><option>Entrega Contínua (CD)</option><option>Metodologia Cascata</option><option>Integração Contínua (CI)</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 CI é fundamental para garantir a qualidade e agilidade do desenvolvimento.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Integração Contínua (CI).</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Qual ferramenta é a mais popular para controle de versão de código?</p>
-                            <select class="form-select" onchange="check(this,'Git')"><option selected disabled></option><option>Docker</option><option>Git</option><option>Jira</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Git, criado por Linus Torvalds, é o padrão da indústria.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Git.</div>
+                            <p>3. Qual sistema de controle de versão é o padrão da indústria, permitindo que equipes colaborem no mesmo código-fonte?</p>
+                            <select class="form-select" onchange="check(this,'Git')"><option selected disabled></option><option>Git</option><option>Scrum</option><option>Kanban</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ Criado por Linus Torvalds, o Git revolucionou o desenvolvimento de software.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Git.</div>
                         </div>
                     </div>
                 </div>
@@ -323,26 +391,32 @@
                 <div class="tab-pane fade" id="tab10">
                     <div class="card-section">
                         <h2>10. Inteligência Artificial (IA)</h2>
-                        <p>Inteligência Artificial é um campo da ciência da computação dedicado a criar sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana, como aprender, raciocinar, reconhecer padrões e entender a linguagem.</p>
-                        <p><strong>Machine Learning (Aprendizado de Máquina)</strong> – É o subcampo mais proeminente da IA. Em vez de serem explicitamente programados, os sistemas de ML aprendem a partir de dados. Os tipos principais são:<br>  - <strong>Supervisionado</strong>: Aprende com dados rotulados (ex: classificar e-mails como spam ou não spam).<br>  - <strong>Não Supervisionado</strong>: Encontra padrões em dados não rotulados (ex: agrupar clientes com comportamentos de compra semelhantes).<br>  - <strong>Por Reforço</strong>: Aprende através de tentativa e erro, recebendo recompensas ou punições (ex: treinar um agente para jogar xadrez).<br><strong>Deep Learning (Aprendizagem Profunda)</strong> – Uma subárea do Machine Learning que usa redes neurais artificiais com muitas camadas ("profundas") para aprender padrões complexos, sendo a força por trás do reconhecimento de imagem e da IA generativa.</p>
-                        <div class="curiosidade">O Teste de Turing, proposto por Alan Turing em 1950, é um teste da capacidade de uma máquina exibir comportamento inteligente indistinguível do de um ser humano. Se um avaliador humano não consegue diferenciar consistentemente as respostas de uma máquina das de um humano, a máquina "passa" no teste.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/a2a443k_4C4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Inteligência Artificial é um vasto campo da computação que busca criar máquinas capazes de realizar tarefas que normalmente requerem inteligência humana. Dentro da IA, existem subcampos importantes.</p>
+                        <p><strong>IA, Machine Learning e Deep Learning:</strong><br>
+                        - <strong>Inteligência Artificial (IA):</strong> O conceito mais amplo, que abrange desde sistemas baseados em regras (IA simbólica) até o aprendizado a partir de dados.<br>
+                        - <strong>Machine Learning (ML - Aprendizado de Máquina):</strong> Um subcampo da IA focado em algoritmos que permitem aos computadores aprender padrões a partir de dados, sem serem explicitamente programados. Os principais tipos são:<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Aprendizado Supervisionado:</strong> O algoritmo é treinado com um conjunto de dados rotulados (ex: uma coleção de imagens de gatos e cachorros com suas respectivas etiquetas). O objetivo é aprender a mapear uma entrada para uma saída. Usado em classificação (spam ou não spam) e regressão (prever o preço de uma casa).<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Aprendizado Não Supervisionado:</strong> O algoritmo recebe dados não rotulados e deve encontrar padrões ou estruturas por conta própria. Usado em clusterização (agrupar clientes com perfis semelhantes) e redução de dimensionalidade.<br>
+                          &nbsp;&nbsp;&nbsp;- <strong>Aprendizado por Reforço:</strong> Um agente aprende a tomar decisões em um ambiente para maximizar uma recompensa. Ele aprende por tentativa e erro. Usado em jogos (AlphaGo) e robótica.<br>
+                        - <strong>Deep Learning (Aprendizagem Profunda):</strong> Um subcampo do Machine Learning que utiliza <strong>Redes Neurais Artificiais</strong> com múltiplas camadas (arquiteturas "profundas"). Essas redes são inspiradas na estrutura do cérebro humano e são capazes de aprender representações de dados extremamente complexas. É a tecnologia por trás dos maiores avanços recentes, como reconhecimento de imagem, tradução automática e IA generativa.</p>
+                        <p><strong>IA Generativa e LLMs:</strong><br>
+                        A IA Generativa é uma vertente do Deep Learning que cria novos conteúdos (texto, imagens, música) em vez de apenas classificar ou prever. Os <strong>Modelos de Linguagem Grandes (LLMs)</strong>, como o GPT, são um tipo de IA generativa treinada em vastas quantidades de texto para entender e gerar linguagem humana de forma coerente.</p>
+                        <div class="curiosidade">As Redes Neurais Convolucionais (CNNs), um tipo de arquitetura de Deep Learning, foram inspiradas no córtex visual dos animais. Elas são excepcionalmente boas em encontrar padrões hierárquicos em imagens, como detectar bordas, depois formas simples, e então objetos complexos como um rosto, tornando-as a base para a maioria das tarefas de visão computacional.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual subcampo da IA foca em treinar modelos a partir de dados?</p>
-                            <select class="form-select" onchange="check(this,'Machine Learning')"><option selected disabled></option><option>Computação Gráfica</option><option>Machine Learning</option><option>Sistemas Operacionais</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Machine Learning é sobre aprender com dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Machine Learning.</div>
+                            <p>1. Um sistema que agrupa clientes de um e-commerce em diferentes segmentos com base em seu comportamento de compra, sem dados pré-rotulados, está usando qual tipo de aprendizado?</p>
+                            <select class="form-select" onchange="check(this,'Não Supervisionado')"><option selected disabled></option><option>Supervisionado</option><option>Não Supervisionado</option><option>Por Reforço</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 O aprendizado não supervisionado é usado para encontrar padrões ocultos em dados.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Não Supervisionado.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Um algoritmo que aprende a classificar e-mails como spam ou não, usando exemplos já classificados, é um exemplo de aprendizado:</p>
-                            <select class="form-select" onchange="check(this,'Supervisionado')"><option selected disabled></option><option>Supervisionado</option><option>Não Supervisionado</option><option>Por Reforço</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Usa dados rotulados, portanto é supervisionado.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Supervisionado.</div>
+                            <p>2. A tecnologia por trás dos avanços mais significativos em reconhecimento de imagem e IA generativa, que utiliza redes neurais com muitas camadas, é chamada de:</p>
+                            <select class="form-select" onchange="check(this,'Deep Learning')"><option selected disabled></option><option>IA Simbólica</option><option>Machine Learning Clássico</option><option>Deep Learning</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 Deep Learning é o motor da revolução atual em IA.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Deep Learning.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Deep Learning é uma técnica que utiliza principalmente:</p>
-                            <select class="form-select" onchange="check(this,'Redes Neurais Artificiais')"><option selected disabled></option><option>Árvores de Decisão</option><option>Algoritmos Genéticos</option><option>Redes Neurais Artificiais</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Redes neurais com muitas camadas são a base do Deep Learning.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Redes Neurais Artificiais.</div>
+                            <p>3. Modelos como o GPT, que são treinados para gerar texto de forma coerente, são um exemplo de:</p>
+                            <select class="form-select" onchange="check(this,'Modelos de Linguagem Grandes (LLMs)')"><option selected disabled></option><option>Algoritmos de Regressão</option><option>Sistemas Especialistas</option><option>Modelos de Linguagem Grandes (LLMs)</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ LLMs são a base da IA generativa de texto.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Modelos de Linguagem Grandes (LLMs).</div>
                         </div>
                     </div>
                 </div>
@@ -351,26 +425,35 @@
                 <div class="tab-pane fade" id="tab11">
                     <div class="card-section">
                         <h2>11. Segurança da Informação</h2>
-                        <p>Segurança da Informação é a prática de proteger informações e sistemas contra acesso, uso, divulgação, alteração ou destruição não autorizados. Ela é baseada em três pilares fundamentais, conhecidos como a Tríade CIA.</p>
-                        <p><strong>Pilares da Segurança (Tríade CIA)</strong>:<br>  - <strong>Confidencialidade</strong>: Garante que a informação seja acessível apenas por pessoas autorizadas. A <strong>criptografia</strong> é uma ferramenta chave aqui.<br>  - <strong>Integridade</strong>: Assegura que a informação é precisa e confiável, não tendo sido modificada indevidamente.<br>  - <strong>Disponibilidade</strong>: Garante que a informação e os sistemas estejam disponíveis para uso quando necessário.<br><strong>Ameaças Comuns</strong>:<br>  - <strong>Malware</strong>: Software malicioso, como vírus, worms e ransomware.<br>  - <strong>Phishing</strong>: Tentativas de enganar usuários para que revelem informações sensíveis, como senhas e cartões de crédito.<br>  - <strong>Ataques de Negação de Serviço (DoS/DDoS)</strong>: Tentativas de sobrecarregar um sistema para torná-lo indisponível.</p>
-                        <div class="curiosidade">A criptografia não é uma invenção moderna. Júlio César usava uma cifra de substituição simples, conhecida hoje como Cifra de César, para proteger suas comunicações militares há mais de 2000 anos. Ele simplesmente substituía cada letra pela letra três posições à frente no alfabeto.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GqG6zS9v9_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>Segurança da Informação (InfoSec) é o conjunto de práticas e estratégias para proteger a informação contra ameaças e garantir a continuidade do negócio. Ela se baseia na <strong>Tríade CIA</strong>, um modelo que define os três principais objetivos da segurança.</p>
+                        <p><strong>A Tríade CIA:</strong><br>
+                        - <strong>Confidencialidade:</strong> Garante que a informação seja acessível apenas por pessoas autorizadas. A principal ferramenta para isso é a <strong>criptografia</strong>.<br>
+                        - <strong>Integridade:</strong> Garante que os dados sejam precisos e não tenham sido alterados de forma não autorizada durante o armazenamento ou a transmissão. Funções de <strong>hashing</strong> (como SHA-256) são usadas para verificar a integridade.<br>
+                        - <strong>Disponibilidade:</strong> Garante que os sistemas e os dados estejam acessíveis para usuários autorizados sempre que necessário. Medidas contra ataques de negação de serviço (DDoS) e sistemas redundantes são exemplos de práticas que visam garantir a disponibilidade.</p>
+                        <p><strong>Criptografia:</strong><br>
+                        É a ciência de codificar informações para que apenas as partes autorizadas possam lê-las.<br>
+                        - <strong>Criptografia Simétrica:</strong> Usa a mesma chave secreta tanto para criptografar quanto para descriptografar a mensagem. É muito rápida, mas o compartilhamento seguro da chave é um desafio. (Ex: AES).<br>
+                        - <strong>Criptografia Assimétrica (ou de Chave Pública):</strong> Usa um par de chaves: uma <strong>chave pública</strong> (que pode ser compartilhada com todos) para criptografar, e uma <strong>chave privada</strong> (mantida em segredo pelo destinatário) para descriptografar. É a base da segurança na internet (HTTPS, assinaturas digitais). (Ex: RSA).</p>
+                        <p><strong>Ameaças Comuns:</strong><br>
+                        - <strong>Malware:</strong> Software malicioso que inclui vírus, worms, spyware e <strong>ransomware</strong> (que criptografa os arquivos da vítima e exige um resgate).<br>
+                        - <strong>Phishing:</strong> Um tipo de <strong>engenharia social</strong> onde um atacante se passa por uma entidade confiável (como um banco) para enganar a vítima e fazê-la revelar informações sensíveis.<br>
+                        - <strong>Ataque de Negação de Serviço (DoS/DDoS):</strong> O objetivo é sobrecarregar um servidor com um volume massivo de tráfego falso, tornando-o indisponível para usuários legítimos.</p>
+                        <div class="curiosidade">O protocolo HTTPS, que protege sua navegação na web, usa criptografia assimétrica (para a troca segura de chaves) e simétrica (para a comunicação de dados em si). Quando você se conecta a um site seguro, seu navegador usa a chave pública do site para negociar uma chave simétrica temporária. Depois, toda a comunicação é criptografada com essa chave simétrica, que é muito mais rápida.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. Qual pilar da segurança garante que a informação só é acessada por pessoas autorizadas?</p>
-                            <select class="form-select" onchange="check(this,'Confidencialidade')"><option selected disabled></option><option>Integridade</option><option>Disponibilidade</option><option>Confidencialidade</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 Confidencialidade é sinônimo de sigilo.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Confidencialidade.</div>
+                            <p>1. Qual pilar da Tríade CIA garante que os dados não foram alterados indevidamente e permanecem precisos?</p>
+                            <select class="form-select" onchange="check(this,'Integridade')"><option selected disabled></option><option>Confidencialidade</option><option>Integridade</option><option>Disponibilidade</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 A integridade é verificada, por exemplo, através de hashes.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Integridade.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. Um e-mail falso que tenta roubar sua senha é um exemplo de:</p>
-                            <select class="form-select" onchange="check(this,'Phishing')"><option selected disabled></option><option>Ransomware</option><option>Phishing</option><option>DDoS</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 Phishing é a "pescaria" de dados sensíveis.</div><div class="quiz-feedback wrong">Incorreto. Isso é um ataque de Phishing.</div>
+                            <p>2. O tipo de criptografia que utiliza um par de chaves (pública e privada) é chamado de:</p>
+                            <select class="form-select" onchange="check(this,'Assimétrica')"><option selected disabled></option><option>Simétrica</option><option>Assimétrica</option><option>Hashing</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A criptografia assimétrica é a base da segurança da internet moderna.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Assimétrica.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. Qual tecnologia é usada para embaralhar dados e torná-los ilegíveis sem a chave correta?</p>
-                            <select class="form-select" onchange="check(this,'Criptografia')"><option selected disabled></option><option>Firewall</option><option>Criptografia</option><option>Antivírus</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ A criptografia é fundamental para a confidencialidade.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Criptografia.</div>
+                            <p>3. Ataques de Phishing são um exemplo de qual tipo de ameaça, que explora a psicologia humana para enganar as vítimas?</p>
+                            <select class="form-select" onchange="check(this,'Engenharia Social')"><option selected disabled></option><option>Ransomware</option><option>Ataque DDoS</option><option>Engenharia Social</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ A engenharia social é a arte de manipular pessoas para obter informações confidenciais.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Engenharia Social.</div>
                         </div>
                     </div>
                 </div>
@@ -379,26 +462,29 @@
                 <div class="tab-pane fade" id="tab12">
                     <div class="card-section">
                         <h2>12. Ética em Computação</h2>
-                        <p>À medida que a tecnologia se torna mais poderosa e onipresente, as implicações éticas de seu uso se tornam cada vez mais importantes. A ética em computação explora os dilemas morais e o impacto social da tecnologia, buscando guiar profissionais a agirem de forma responsável.</p>
-                        <p><strong>Privacidade de Dados</strong> – Quem tem o direito de coletar, armazenar e usar nossos dados pessoais? Leis como a LGPD (Lei Geral de Proteção de Dados) no Brasil tentam regulamentar essa questão.<br><strong>Viés Algorítmico</strong> – Algoritmos de IA, treinados com dados do mundo real, podem aprender e amplificar preconceitos existentes na sociedade, levando a decisões injustas em áreas como contratação, crédito e policiamento.<br><strong>Propriedade Intelectual</strong> – O debate entre software <strong>proprietário</strong> (código fechado, como o Windows) e software <strong>livre/de código aberto</strong> (que permite acesso e modificação do código, como o Linux).<br><strong>Automação e o Futuro do Trabalho</strong> – Qual é o impacto social da automação de empregos pela IA? Quais são nossas responsabilidades ao criar tecnologias que podem deslocar trabalhadores?</p>
-                        <div class="curiosidade">O movimento do "Software Livre", lançado por Richard Stallman em 1983, defende quatro liberdades essenciais para os usuários de software: a liberdade de executar, estudar, redistribuir e modificar o software. Isso deu origem ao projeto GNU e à popular licença GPL.</div>
-                        <h5>Vídeo recomendado</h5>
-                        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ABdKEbeL-AA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <p>A ética em computação é o campo que estuda e analisa o impacto social da tecnologia da informação e os dilemas morais enfrentados pelos profissionais da área. À medida que a tecnologia se torna mais poderosa, suas implicações éticas se tornam cada vez mais complexas.</p>
+                        <p><strong>Principais Dilemas Éticos:</strong><br>
+                        - <strong>Privacidade e Vigilância:</strong> A coleta massiva de dados por empresas e governos levanta questões sobre o direito à privacidade. O <strong>capitalismo de vigilância</strong> é um modelo de negócio que se baseia na coleta e venda de dados pessoais para prever e influenciar o comportamento humano. Leis como a GDPR na Europa e a LGPD no Brasil tentam dar aos usuários mais controle sobre seus dados.<br>
+                        - <strong>Viés Algorítmico e Justiça:</strong> Algoritmos de Machine Learning aprendem com dados históricos. Se esses dados refletem preconceitos da sociedade (raciais, de gênero, etc.), o algoritmo pode aprender e até amplificar esses vieses, levando a decisões discriminatórias em áreas críticas como aprovação de crédito, sentenças criminais e contratação de funcionários.<br>
+                        - <strong>Propriedade Intelectual:</strong> O debate entre software <strong>proprietário</strong>, cujo código-fonte é secreto (ex: Windows), e o movimento do <strong>Software Livre e de Código Aberto (FOSS)</strong>, que defende que o código deve ser acessível e modificável por todos (ex: Linux). O FOSS argumenta que isso promove a colaboração, a segurança e a liberdade do usuário.<br>
+                        - <strong>Automação e o Futuro do Trabalho:</strong> A automação impulsionada pela IA tem o potencial de eliminar milhões de empregos. Isso cria um dilema ético sobre a responsabilidade social das empresas de tecnologia e a necessidade de políticas públicas, como a renda básica universal, para lidar com o deslocamento de trabalhadores.<br>
+                        - <strong>Exclusão Digital (Digital Divide):</strong> A diferença no acesso e na capacidade de usar tecnologias de informação entre diferentes grupos sociais, econômicos ou geográficos. A crescente dependência da tecnologia pode aprofundar a desigualdade social se não forem tomadas medidas para garantir o acesso universal.</p>
+                        <div class="curiosidade">O "Dilema do Bonde" (Trolley Problem) é um experimento mental em ética que foi adaptado para a era da IA no contexto de carros autônomos. Se um acidente é inevitável, o carro deve ser programado para desviar e atingir um pedestre para salvar o motorista, ou seguir em frente e sacrificar o motorista para salvar múltiplos pedestres? Não há resposta fácil, e isso expõe a complexidade de programar "moralidade" em uma máquina.</div>
                         <h5>Mini-Quiz</h5>
                         <div class="quiz-question">
-                            <p>1. A preocupação de que um algoritmo de IA possa tomar decisões injustas com base nos dados de treinamento é um problema de:</p>
-                            <select class="form-select" onchange="check(this,'Viés')"><option selected disabled></option><option>Desempenho</option><option>Viés</option><option>Custo</option></select>
-                            <div class="quiz-feedback correct">Correto! 🎉 O viés algorítmico é um grande desafio ético.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Viés (Bias).</div>
+                            <p>1. O modelo de negócio baseado na coleta e monetização de dados pessoais é conhecido como:</p>
+                            <select class="form-select" onchange="check(this,'Capitalismo de Vigilância')"><option selected disabled></option><option>Software Livre</option><option>Capitalismo de Vigilância</option><option>Exclusão Digital</option></select>
+                            <div class="quiz-feedback correct">Correto! 🎉 Este termo descreve a economia baseada em dados que domina a internet hoje.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Capitalismo de Vigilância.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>2. A LGPD no Brasil é uma lei que trata principalmente de:</p>
-                            <select class="form-select" onchange="check(this,'Proteção de Dados Pessoais')"><option selected disabled></option><option>Propriedade Intelectual</option><option>Crimes Cibernéticos</option><option>Proteção de Dados Pessoais</option></select>
-                            <div class="quiz-feedback correct">Correto! 🚀 LGPD significa Lei Geral de Proteção de Dados.</div><div class="quiz-feedback wrong">Incorreto. A LGPD foca na privacidade e proteção de dados.</div>
+                            <p>2. A LGPD (Lei Geral de Proteção de Dados) no Brasil foi criada para lidar principalmente com qual questão ética?</p>
+                            <select class="form-select" onchange="check(this,'Privacidade de Dados')"><option selected disabled></option><option>Viés Algorítmico</option><option>Privacidade de Dados</option><option>Propriedade Intelectual</option></select>
+                            <div class="quiz-feedback correct">Correto! 🚀 A LGPD dá aos cidadãos brasileiros mais controle sobre suas informações pessoais.</div><div class="quiz-feedback wrong">Incorreto. O foco principal da LGPD é a Privacidade de Dados.</div>
                         </div>
                         <div class="quiz-question">
-                            <p>3. O modelo de software que permite aos usuários ver e modificar o código-fonte é chamado de:</p>
-                            <select class="form-select" onchange="check(this,'Código Aberto (Open Source)')"><option selected disabled></option><option>Proprietário</option><option>Código Aberto (Open Source)</option><option>Freeware</option></select>
-                            <div class="quiz-feedback correct">Correto! ✅ Linux e Firefox são exemplos de software de código aberto.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Código Aberto.</div>
+                            <p>3. O Linux e o Firefox são exemplos de software que seguem qual filosofia de desenvolvimento e distribuição?</p>
+                            <select class="form-select" onchange="check(this,'Software Livre e de Código Aberto (FOSS)')"><option selected disabled></option><option>Software Proprietário</option><option>Software como Serviço (SaaS)</option><option>Software Livre e de Código Aberto (FOSS)</option></select>
+                            <div class="quiz-feedback correct">Correto! ✅ FOSS defende a liberdade dos usuários para ver, modificar e distribuir o software.</div><div class="quiz-feedback wrong">Incorreto. A resposta é Software Livre e de Código Aberto (FOSS).</div>
                         </div>
                     </div>
                 </div>
@@ -423,27 +509,25 @@
     <p>© 2025 – Feito com carinho pelo Gemini • Tudo 100% funcional e completo agora!</p>
 </footer>
 
-<!-- A LINHA ESSENCIAL PARA AS ABAS FUNCIONAREM -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 // Função para feedback instantâneo nos mini-quizzes
 function check(e,correct){let f=e.nextElementSibling; let w=f.nextElementSibling; e.value===correct?(f.style.display='block',w.style.display='none'):(w.style.display='block',f.style.display='none');}
 
 // Dados e lógica para o Quiz Geral
 const generalQuizQuestions = [
-    { topic: "História", question: "A arquitetura que define os computadores modernos foi proposta por:", options: ["Alan Turing", "Tim Berners-Lee", "John von Neumann"], answer: "John von Neumann" },
-    { topic: "Representação", question: "Quantos valores diferentes um único byte pode representar?", options: ["8", "64", "256"], answer: "256" },
-    { topic: "Arquitetura", question: "Qual componente da CPU executa cálculos matemáticos e lógicos?", options: ["Unidade de Controle", "ULA", "Registradores"], answer: "ULA" },
-    { topic: "Sistemas Operacionais", question: "A capacidade de executar vários programas 'ao mesmo tempo' é chamada de:", options: ["Multitarefa", "Multi-usuário", "Monotarefa"], answer: "Multitarefa" },
-    { topic: "Algoritmos", question: "Qual estrutura de dados segue o princípio 'o último a entrar é o primeiro a sair' (LIFO)?", options: ["Fila", "Pilha", "Árvore"], answer: "Pilha" },
-    { topic: "Linguagens", question: "Uma linguagem que é traduzida de uma só vez para código de máquina é chamada de:", options: ["Interpretada", "Compilada", "Script"], answer: "Compilada" },
-    { topic: "Redes", question: "O que o DNS (Domain Name System) faz?", options: ["Garante a entrega de pacotes", "Criptografa a comunicação", "Traduz nomes de domínio em endereços IP"], answer: "Traduz nomes de domínio em endereços IP" },
-    { topic: "Bancos de Dados", question: "Qual linguagem é padrão para interagir com bancos de dados relacionais?", options: ["SQL", "NoSQL", "Java"], answer: "SQL" },
-    { topic: "Engenharia de Software", question: "Na metodologia Scrum, o trabalho é dividido em ciclos curtos e iterativos chamados:", options: ["Sprints", "Releases", "Maratonas"], answer: "Sprints" },
-    { topic: "Inteligência Artificial", question: "Deep Learning é uma técnica que utiliza principalmente:", options: ["Árvores de Decisão", "Redes Neurais Artificiais", "Algoritmos Genéticos"], answer: "Redes Neurais Artificiais" },
-    { topic: "Segurança", question: "Um e-mail falso que tenta roubar sua senha é um exemplo de:", options: ["Ransomware", "DDoS", "Phishing"], answer: "Phishing" },
-    { topic: "Ética", question: "A preocupação de que um algoritmo possa tomar decisões injustas com base nos dados é um problema de:", options: ["Desempenho", "Viés", "Custo"], answer: "Viés" }
+    { topic: "História", question: "A empresa de Herman Hollerith, criada para processar dados do censo, evoluiu para se tornar qual gigante da tecnologia?", options: ["Microsoft", "Intel", "IBM"], answer: "IBM" },
+    { topic: "Representação", question: "No sistema de cores RGB de 24 bits, quantos bits são usados para representar cada canal de cor (Vermelho, Verde e Azul)?", options: ["1 bit", "8 bits", "24 bits"], answer: "8 bits" },
+    { topic: "Arquitetura", question: "Na hierarquia de memória, qual é o tipo de memória mais rápido e mais próximo da CPU?", options: ["RAM", "Cache L3", "Registradores"], answer: "Registradores" },
+    { topic: "Sistemas Operacionais", question: "A parte central de um SO que gerencia diretamente o hardware é chamada de:", options: ["Shell", "Kernel", "Driver"], answer: "Kernel" },
+    { topic: "Algoritmos", question: "Um algoritmo de busca binária, que divide o espaço de busca pela metade a cada passo, tem qual complexidade de tempo?", options: ["O(n)", "O(log n)", "O(1)"], answer: "O(log n)" },
+    { topic: "Linguagens", question: "Linguagens como Java e C++, que exigem a declaração do tipo de uma variável antes do uso, possuem:", options: ["Tipagem Dinâmica", "Tipagem Estática", "Tipagem Fraca"], answer: "Tipagem Estática" },
+    { topic: "Redes", question: "Qual modelo de camadas é a base prática da Internet, composto por 4 camadas (Aplicação, Transporte, Rede, Enlace)?", options: ["Modelo OSI", "Modelo TCP/IP", "Modelo Híbrido"], answer: "Modelo TCP/IP" },
+    { topic: "Bancos de Dados", question: "O princípio 'Basically Available, Soft state, Eventual consistency' (BASE) é uma característica comum de qual categoria de bancos de dados?", options: ["SQL", "Relacionais", "NoSQL"], answer: "NoSQL" },
+    { topic: "Engenharia de Software", question: "No Scrum, qual papel atua como um facilitador do processo, removendo impedimentos para a equipe de desenvolvimento?", options: ["Product Owner", "Stakeholder", "Scrum Master"], answer: "Scrum Master" },
+    { topic: "Inteligência Artificial", question: "Um algoritmo treinado por tentativa e erro para maximizar uma recompensa em um ambiente, como em um jogo, usa qual tipo de aprendizado?", options: ["Supervisionado", "Por Reforço", "Não Supervisionado"], answer: "Por Reforço" },
+    { topic: "Segurança", question: "O tipo de criptografia que usa a mesma chave para criptografar e descriptografar dados é a:", options: ["Assimétrica", "Simétrica", "Quântica"], answer: "Simétrica" },
+    { topic: "Ética", question: "O problema da desigualdade no acesso e uso da tecnologia entre diferentes grupos sociais é conhecido como:", options: ["Viés Algorítmico", "Exclusão Digital", "Capitalismo de Vigilância"], answer: "Exclusão Digital" }
 ];
 
 function buildGeneralQuiz() {
@@ -481,11 +565,13 @@ function score() {
     const finalScoreElement = document.getElementById('finalScore');
     let message = `Sua pontuação final é: ${score} de ${generalQuizQuestions.length}.<br>`;
     if (score === generalQuizQuestions.length) {
-        message += "Parabéns, você acertou tudo! 🚀";
-    } else if (score >= generalQuizQuestions.length / 2) {
-        message += "Muito bem! Você tem um bom conhecimento geral.";
+        message += "Excelente! Você dominou todos os tópicos. 🚀";
+    } else if (score >= 8) {
+        message += "Muito bom! Seu conhecimento sobre os fundamentos é sólido.";
+    } else if (score >= 5) {
+        message += "Bom trabalho! Continue revisando os tópicos para fortalecer a base.";
     } else {
-        message += "Continue estudando para melhorar seus conhecimentos.";
+        message += "Continue estudando. Cada erro é uma oportunidade de aprender!";
     }
     finalScoreElement.innerHTML = message;
 }
